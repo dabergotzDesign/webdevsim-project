@@ -1,0 +1,29 @@
+.pill-pattern{
+  height: 100%;
+  width: 20%;
+}
+.pill{
+  height:2em;
+  border-radius:20px;
+  margin: 1em;
+  /* float:left; */
+  background-color: #ec6463;
+}
+.pill:nth-child(2n+1){
+  background-color: #e53889;
+}
+.one{
+  width:5em;
+}
+.two{
+  width:10em;
+}
+.three{
+  width:8em;
+}
+.four{
+  width:3em;
+}
+.five{
+  width:15em;
+}
