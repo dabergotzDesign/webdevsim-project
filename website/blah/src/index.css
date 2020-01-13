@@ -8,6 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color:rgba(38,38,62);
+  height: 95vh;
 }
 
 code {
@@ -22,7 +23,14 @@ h1,p{
 }
 .center{
 text-align:center;
-/* margin: 0 auto; */
+shape-outside: circle(50%);
+position: absolute;
+    right: 0;
+    left: 0;
+    top: 20%;
+width: fit-content;
+margin: 0 auto;
+z-index: 1;
 }
 .logo:before{
   content:"\003c";
@@ -38,4 +46,17 @@ border-bottom: 5px solid rgba(128,128,128);
 width: 25px;
 display: block;
 margin:0 auto;
+}
+
+
+@media(max-width: 768px) { 
+.home{
+  height: 95vh;
+}
+.pill-pattern{
+  overflow:hidden;
+}
+.pill-row{
+  flex-wrap: wrap;
+}
 }
