@@ -1,0 +1,9 @@
+.nav-top a{
+    color: #f2d283;
+    font-size:3em;
+    margin-right: 30px;
+    font-family: 'Nova Mono', monospace;
+}
+a:hover{
+    color: #6ffce9;
+}

@@ -1,0 +1,96 @@
+/* logo */
+
+h1,p{
+    color:rgba(128,128,128);
+  }
+.logo{
+  font-weight: 100;
+  color:rgba(111,252,233);
+  font-size:3em;
+}
+.center{
+  font-family: 'Nova Mono', monospace;
+  text-align:center;
+  shape-outside: circle(50%);
+  position: absolute;
+      right: 0;
+      left: 0;
+      top: 15%;
+      width: fit-content;
+      margin: 0 auto;
+      z-index: 1;
+      font-size: 1.4em
+  }
+  .logo:before{
+    content:"\003c";
+    color: rgba(242,210,131);
+  }
+  .logo:after{
+   content:"/\003e";
+   color: rgba(242,210,131);
+  }
+  #divider:before{
+  content:"";
+  border-bottom: 5px solid rgba(128,128,128);
+  width: 25px;
+  display: block;
+  margin:0 auto;
+  }
+
+/* pills */
+
+.pill-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    overflow:hidden;
+    }
+    .pill-pattern{
+      width: 2px;
+      overflow: visible;
+    }
+    .right{
+      transform: rotateY(180deg);
+    }
+    .flip{
+      transform: rotateX(180deg);
+    }
+    .pill-row{
+     display: inline-flex;
+    }
+    .pill{
+      height:2em;
+      border-radius:20px;
+      margin: 0.5em;
+      background-color: #ec6463;
+    }
+    .pill:hover{
+      background-color: rgba(242,210,131);
+    }
+    .pill:nth-child(2n+2){
+      background-color: #e53889;
+    }
+    .pill:nth-child(2n+2):hover{
+      background-color:rgba(111,252,233);
+    }
+    .empty{
+      background-color:transparent;
+      width: 7em;
+    }
+    .one{
+      width:5em;
+    }
+    .two{
+      width:10em;
+    }
+    .three{
+      width:8em;
+    }
+    .four{
+      width:3em;
+    }
+    .five{
+      width:15em;
+    }
+

@@ -1,0 +1,17 @@
+.footer{
+    width: 100%;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: black;
+    line-height: 50px;
+}
+.footer a{
+    margin: 30px;
+    color: #6ffce9;
+    text-transform: uppercase;
+}
+.footer a:hover{
+    color:#f2d283;
+}

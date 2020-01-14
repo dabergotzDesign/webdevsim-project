@@ -1,0 +1,21 @@
+.game-frame{
+    height: 60vh;
+    width: 90%;
+    border: 2px solid yellow;
+    margin:20px auto;
+    position: relative;
+}
+#download{
+    position: absolute;
+    padding: 20px;
+    border: 2px solid yellow;
+    top: 105%;
+    right: -2px;
+    font-family: 'Nova Mono', monospace;
+    font-size: 1.5em;
+    color: white;
+    height: fit-content;
+}
+#download:hover{
+    color: turquoise;
+}

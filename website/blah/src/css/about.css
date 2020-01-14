@@ -1,0 +1,39 @@
+.text{
+position: relative;
+text-align: justify;
+padding: 10px;
+margin:0 auto;
+}
+.dennis-box, .katrin-box{
+border: 2px solid #e53889; 
+height: fit-content;
+position:absolute;
+}
+.dennis-box{
+width: 400px;
+left:60%;
+}
+.katrin-box{
+width: 300px;
+top: 20%;
+position: absolute;
+}
+.Dennis, .Katrin{
+clear:both;
+background-size: cover;
+width: 200px;
+height:200px;
+overflow: visible;
+border: 2px solid #ec6463;
+margin: 0 10px 0 10px;
+}
+.Dennis{
+float:left;  
+margin-left: -30%;
+background-image: url("../images/Dennis-big.png");
+}
+.Katrin{
+float:right;  
+margin-right:-35%;
+background-image: url("../images/Katrin-big.png");
+}

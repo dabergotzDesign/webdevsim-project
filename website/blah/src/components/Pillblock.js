@@ -2,8 +2,7 @@ import React from 'react';
 
 const Pillblock =(props)=>{
     return( 
-        <div className={props.flip}>
-        <div className="pill-block">
+        <div className={`pill-block ${props.flip}`}>
         <div className="pill-row">
         <div className="pill one"></div>
         <div className="pill two"></div>
@@ -27,7 +26,6 @@ const Pillblock =(props)=>{
         </div>
         <div className="pill-row"> 
         <div className="pill four"></div>
-        </div>
         </div>
         </div>
         )
