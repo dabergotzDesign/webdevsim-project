@@ -10,7 +10,7 @@ const Nav =(props)=>{
     } else 
     document.body.classList.add("nothome");
 return( 
-    <nav className="nav-top">
+    <nav>
    <Link to="/">Home</Link>
    <Link to="/about">About</Link>
    <Link to="/game">Game</Link>

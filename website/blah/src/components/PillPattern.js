@@ -5,7 +5,7 @@ const PillPattern =(props)=>{
     return( 
     <div className={`pill-pattern ${props.class}`}> 
  <Pillblock/>
- <Pillblock flip="flip"/>
+ <Pillblock class="flip"/>
  <Pillblock/>
     </div>
         )

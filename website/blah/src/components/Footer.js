@@ -8,11 +8,11 @@ const Footer =(props)=>{
       return null;
     } else 
 return( 
-    <nav className="footer">
+    <footer>
    <Link to="/contact">Contact</Link>
    <Link to="/impressum">Impressum</Link>
    <Link to="/cookies">Cookies</Link>
-    </nav>
+    </footer>
     )
 }
  

@@ -13,7 +13,7 @@ const Router = () => {
   return(<HashRouter basename="/">
     <Nav/>
     <Switch>
-      <div className="content">
+    <div className="content">
     <Route exact path="/" component={App} />
     <Route exact path="/about" component={About} />
     <Route exact path="/game" component={Game} />

@@ -9,8 +9,8 @@ return(
     <div className="center">
     <h1 className="logo">WEBDEVSIM</h1>
     <p id="divider"></p>
-    <h1>A WEB DEVELOPMENT SIMULATION</h1>
-    <Link to="/game">START</Link>
+    <h1 id="sub-h1">A WEB DEVELOPMENT SIMULATION</h1>
+    <Link to="/game" id="start">START</Link>
     </div>
     <Pills class="right"></Pills>
     </div>

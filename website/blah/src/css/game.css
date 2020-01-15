@@ -1,16 +1,18 @@
+.game{
+    display: flex;
+    flex-flow: row-reverse wrap;
+}
 .game-frame{
     height: 60vh;
     width: 90%;
     border: 2px solid yellow;
-    margin:20px auto;
-    position: relative;
+    margin:20px 0;
+    align-self:center;
+    flex-basis:100%;
 }
 #download{
-    position: absolute;
     padding: 20px;
     border: 2px solid yellow;
-    top: 105%;
-    right: -2px;
     font-family: 'Nova Mono', monospace;
     font-size: 1.5em;
     color: white;

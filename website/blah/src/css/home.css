@@ -1,40 +1,50 @@
 /* logo */
 
-h1,p{
-    color:rgba(128,128,128);
-  }
+#start{
+  font-size: 1.2em;
+  color:rgba(242,210,131);
+  text-shadow: 2px 2px #808080;
+}
+#start:hover{
+  color: rgba(111,252,233);
+}
 .logo{
   font-weight: 100;
   color:rgba(111,252,233);
   font-size:3em;
+  text-shadow: 2px 2px #808080;
 }
 .center{
   font-family: 'Nova Mono', monospace;
   text-align:center;
   shape-outside: circle(50%);
   position: absolute;
-      right: 0;
-      left: 0;
-      top: 15%;
-      width: fit-content;
-      margin: 0 auto;
-      z-index: 1;
-      font-size: 1.4em
-  }
-  .logo:before{
-    content:"\003c";
-    color: rgba(242,210,131);
-  }
-  .logo:after{
-   content:"/\003e";
-   color: rgba(242,210,131);
-  }
-  #divider:before{
+  right: 0;
+  left: 0;
+  top: 15%;
+  width: fit-content;
+  margin: 0 auto;
+  z-index: 1;
+  font-size: 1.4em;
+}
+#sub-h1{
+  text-shadow: 4px 3px 0 white;
+}
+.logo:before{
+  content:"\003c";
+  color: rgba(242,210,131);
+    }
+.logo:after{
+  content:"/\003e";
+  color: rgba(242,210,131);
+}
+#divider:before{
   content:"";
   border-bottom: 5px solid rgba(128,128,128);
   width: 25px;
   display: block;
   margin:0 auto;
+  box-shadow: 2px 2px white;
   }
 
 /* pills */

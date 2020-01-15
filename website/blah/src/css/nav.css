@@ -1,9 +1,9 @@
-.nav-top a{
+nav a{
     color: #f2d283;
     font-size:3em;
     margin-right: 30px;
     font-family: 'Nova Mono', monospace;
 }
-a:hover{
+nav a:hover, nav a:focus{
     color: #6ffce9;
 }

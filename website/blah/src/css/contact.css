@@ -1,0 +1,55 @@
+.contact{
+    display: flex;
+    flex-flow: row nowrap;
+}
+form{
+    width: 50%;
+    margin:30px 0;
+    border: 2px solid yellow;
+    padding: 50px;
+    justify-self: flex-start;
+}
+form ul{
+   padding:0;
+   list-style: none;
+}
+input,
+textarea,button {
+  width: 40vw;
+  border: 2px solid transparent;
+  margin: 5px;
+  padding: 5px;
+  background-color: transparent;
+  color: gold;
+  font-size: 1em;
+}
+textarea {
+  height: 20vw;
+}
+input::placeholder,
+textarea::placeholder {
+  color: white;
+  text-align: left;
+}
+.contact ul li{
+  border-bottom: 1px solid gold;
+}
+button[type="submit"]{
+  text-align:left;
+}
+button[type="submit"] i{
+  font-size:2em;
+  color:white;
+}
+button[type="submit"] i:hover {
+  color: gold;
+  transition: color 1s;
+}
+.pill-contact{
+   align-self:center;
+   padding-left: 5%;
+}
+.pill-form{
+   display: flex;
+   flex-flow: column wrap;
+}
