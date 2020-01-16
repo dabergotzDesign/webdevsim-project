@@ -5,7 +5,7 @@
 form{
     width: 50%;
     margin:30px 0;
-    border: 2px solid yellow;
+    border: 2px solid #f2d283;
     padding: 50px;
     justify-self: flex-start;
 }
@@ -20,7 +20,7 @@ textarea,button {
   margin: 5px;
   padding: 5px;
   background-color: transparent;
-  color: gold;
+  color: #6ffce9;
   font-size: 1em;
 }
 textarea {
@@ -28,22 +28,19 @@ textarea {
 }
 input::placeholder,
 textarea::placeholder {
-  color: white;
+  color: #6ffce9;
   text-align: left;
 }
 .contact ul li{
-  border-bottom: 1px solid gold;
+  border-bottom: 1px solid #ec6463;
 }
 button[type="submit"]{
   text-align:left;
-}
-button[type="submit"] i{
-  font-size:2em;
-  color:white;
-}
-button[type="submit"] i:hover {
-  color: gold;
-  transition: color 1s;
+  border: 1px solid #ec6463;
+  padding:10px;
+  margin-top:60px;
+  width: fit-content;
+  border-radius:20px;
 }
 .pill-contact{
    align-self:center;

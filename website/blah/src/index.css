@@ -16,7 +16,7 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:rgba(38,38,62);
+  background-color:#26263e;
 }
 .nothome{
   padding: 30px;
@@ -32,8 +32,8 @@ code {
 nav{
   width: 100%;
 }
-h1,h2{
-  color:rgba(128,128,128);
+h1,h2,h3{
+  color:#808080;
 }
 p{
   color:white;

@@ -5,19 +5,19 @@
 .game-frame{
     height: 60vh;
     width: 90%;
-    border: 2px solid yellow;
+    border: 2px solid #f2d283;
     margin:20px 0;
     align-self:center;
     flex-basis:100%;
 }
 #download{
     padding: 20px;
-    border: 2px solid yellow;
+    border: 2px solid #f2d283;
     font-family: 'Nova Mono', monospace;
     font-size: 1.5em;
     color: white;
     height: fit-content;
 }
 #download:hover{
-    color: turquoise;
+    color: #6ffce9;
 }

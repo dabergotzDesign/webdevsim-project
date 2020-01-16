@@ -4,7 +4,7 @@ import Pills from "./PillPattern";
 
 const Home =()=>{
 return( 
-    <div className="pill-box">
+    <section className="pill-box">
     <Pills/>
     <div className="center">
     <h1 className="logo">WEBDEVSIM</h1>
@@ -13,7 +13,7 @@ return(
     <Link to="/game" id="start">START</Link>
     </div>
     <Pills class="right"></Pills>
-    </div>
+    </section>
     )
 }
  

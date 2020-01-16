@@ -2,15 +2,15 @@
 
 #start{
   font-size: 1.2em;
-  color:rgba(242,210,131);
+  color:#f2d283;
   text-shadow: 2px 2px #808080;
 }
 #start:hover{
-  color: rgba(111,252,233);
+  color: #6ffce9;
 }
 .logo{
   font-weight: 100;
-  color:rgba(111,252,233);
+  color:#6ffce9;
   font-size:3em;
   text-shadow: 2px 2px #808080;
 }
@@ -32,15 +32,15 @@
 }
 .logo:before{
   content:"\003c";
-  color: rgba(242,210,131);
+  color: #f2d283;
     }
 .logo:after{
   content:"/\003e";
-  color: rgba(242,210,131);
+  color: #f2d283;
 }
 #divider:before{
   content:"";
-  border-bottom: 5px solid rgba(128,128,128);
+  border-bottom: 5px solid #6ffce9;
   width: 25px;
   display: block;
   margin:0 auto;
@@ -76,13 +76,13 @@
       background-color: #ec6463;
     }
     .pill:hover{
-      background-color: rgba(242,210,131);
+      background-color: #f2d283;
     }
     .pill:nth-child(2n+2){
       background-color: #e53889;
     }
     .pill:nth-child(2n+2):hover{
-      background-color:rgba(111,252,233);
+      background-color:#6ffce9;
     }
     .empty{
       background-color:transparent;

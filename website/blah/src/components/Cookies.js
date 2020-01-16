@@ -2,7 +2,7 @@ import React from 'react';
 
 const Cookies =()=>{
 return( 
-    <div className="cookies text">
+    <section className="cookies text">
         <h1>Cookie Policy for webdevsim</h1>
         <p>This is the Cookie Policy for webdevsim, accessible from http://localhost:3000/#/</p>
         <h2>What Are Cookies</h2>
@@ -55,7 +55,7 @@ For more general information on cookies see the Wikipedia article on HTTP Cookie
             By visiting this link: http://localhost:3000/#/contact
             </li>
         </ul>
-    </div>
+    </section>
     )
 }
  

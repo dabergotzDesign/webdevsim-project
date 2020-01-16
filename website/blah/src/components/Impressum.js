@@ -2,7 +2,7 @@ import React from 'react';
 
 const Impressum =()=>{
 return( 
-    <div className="Impressum">
+    <section className="Impressum">
         <article className="text">
             <h1>Impressum</h1>
             <p>Angaben gem. § 5 TMG:<br></br>
@@ -50,7 +50,7 @@ Werden uns Rechtsverletzungen bekannt, werden die externen Links durch uns unver
 Dieses Impressum wurde freundlicherweise von www.jurarat.de zur Verfügung gestellt.
             </p>
         </article>
-    </div>
+    </section>
     )
 }
  

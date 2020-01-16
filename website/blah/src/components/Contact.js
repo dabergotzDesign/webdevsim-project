@@ -1,12 +1,18 @@
 import React from 'react';
+import $ from "jquery";
 import Pillblock from "./Pillblock";
 
 const Contact =()=>{
+  function run(e){
+$("button").addClass("slide-out-right");
+  }
+
 return( 
-    <div className="contact">
+    <section className="contact">
  <form
             action="https://formspree.io/mjvyrkjr"
             method="POST"
+            onSubmit={run}
           >
             <ul>
               <li>
@@ -47,14 +53,14 @@ return(
                   required
                 ></textarea>
               </li>
-              <button type="submit">send<i className="far fa-handshake"></i></button>
+              <button type="submit">submit</button>
             </ul>
           </form>
           <div className="pill-contact">
           <Pillblock class="pill-form"/>
           <Pillblock class="pill-form"/>
           </div>
-    </div>
+    </section>
     )
 }
  
