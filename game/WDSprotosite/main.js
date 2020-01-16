@@ -1,10 +1,9 @@
 
 // Change image when buttons is clicked
-let image = document.querySelector(".galleryImage");
+const image = document.querySelector(".galleryImage");
 const imageTitle = document.querySelector(".imageTitle");
 const imageDescription = document.querySelector(".imageDescription");
 
-const galleryButtons = document.querySelectorAll(".galleryButton");
 
 const gBtn1 = document.querySelector(".galleryButton1");
 const gBtn2 = document.querySelector(".galleryButton2");
