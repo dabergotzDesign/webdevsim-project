@@ -1,0 +1,160 @@
+body{
+  background-image: url(images/code.png);
+  background-size: cover;
+  color:#f2d283;
+
+  height:90vh;
+  font-family: monospace;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+nav{
+    background: #808080;
+    border-bottom: 4px solid #e53889;
+
+    position: static;
+    margin: 0;
+    padding: 16px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #f2d283;
+}
+
+nav ul{
+    margin: 0;
+}
+
+.navLink li{
+    display: inline;    
+    font-size: 24px;
+   
+    padding: 8px;
+}
+
+.navLink li:hover{
+    text-decoration: underline;
+}
+
+
+.content{
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+.asideNav,.images{
+    background: #808080;
+    border: 4px solid #ec6463;
+    border-radius: 10px;
+
+    margin:16px;
+    padding: 16px;
+}
+
+.asideNav button{
+    padding: 8px;
+    width: 100%;
+    margin: 8px auto;
+
+    background:#f2d283;
+    border:2px #6ffce9 solid;
+    border-radius: 10px;
+
+
+    font-size: 16px;
+    color: black;
+}
+
+button:hover{
+    cursor: pointer;
+    border:2px #f2d283 solid;
+    background: #6ffce9;
+}
+
+.images img{
+    display: block;
+    margin: auto;
+    width: 50%;
+
+    border:2px white solid;
+}
+
+h1{
+    color:#6ffce9;
+}
+
+h2{
+    text-align: center;
+    padding: 16px;
+}
+
+p{
+    display: block;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+
+    padding: 8px;
+}
+
+ul{
+    list-style: none;
+}
+
+h1{
+    text-align: center;
+}
+
+footer{
+    background: #808080;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 32px;
+
+    font-size: 16px;
+}
+
+
+
+/* ABOUT PAGE */
+.about{
+   display: inline;
+
+   position: absolute;
+   top:150px;
+}
+
+.avatar{
+    display: block;
+    margin:0;
+    width: 15%;
+    
+    position: relative;
+    left: 256px;
+    top:-24px;
+
+    border-radius: 50%;
+    border:6px #ec6463 solid;
+    float: left;
+}
+
+.aboutText{
+    display: block;
+    margin: auto;
+    width: 60%;
+
+    background:#808080;
+    border:6px #ec6463 solid;
+    border-radius: 10px;
+}
+
+.aboutText p{
+    font-size: 16px;
+}
