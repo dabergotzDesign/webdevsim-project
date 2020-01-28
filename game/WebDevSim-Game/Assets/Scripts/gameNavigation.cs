@@ -77,6 +77,10 @@ public class gameNavigation : MonoBehaviour
                 {
                     interactableItems.createDictionary.Add(interactables.noun, interaction.textResponse);
                 }
+                if (interaction.inputAction.keyWord == "add") //"add", used for "add" elements to site (HTML lines, exp. <h1>)
+                {
+                    interactableItems.addDictionary.Add(interactables.noun, interaction.textResponse);
+                }
             }
         }
     }

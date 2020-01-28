@@ -16,4 +16,7 @@ MonoBehaviour:
   description: 
   interactions:
   - inputAction: {fileID: 11400000, guid: 6fce83366d56f1e45a6a5b928249b961, type: 2}
-    textResponse: you created index.html
+    textResponse: 'you created index.html file.
+
+      Let''s go to the file.'
+    actionResponse: {fileID: 0}

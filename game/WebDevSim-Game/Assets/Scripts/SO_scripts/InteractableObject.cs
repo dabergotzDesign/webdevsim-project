@@ -9,5 +9,4 @@ public class InteractableObject : ScriptableObject
     [TextArea]
     public string description = "Description of file"; //file = command
     public Interaction[] interactions;
-
 }
