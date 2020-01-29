@@ -18,10 +18,7 @@ public class InteractableItems : MonoBehaviour
     List<string> nounsInInventory = new List<string>();
     gameNavigation controller;
 
-    List<string> helpCommands = new List<string>();
-
-
-
+ 
     private void Awake()
     {
         controller = GetComponent<gameNavigation>();
@@ -111,6 +108,7 @@ public class InteractableItems : MonoBehaviour
             nounsInInventory.Add(noun);
             nounsInFile.Remove(noun);
             return addDictionary;
+            
         }
         else
         {
@@ -118,6 +116,5 @@ public class InteractableItems : MonoBehaviour
             return null;
         }
     }
-
 
 }

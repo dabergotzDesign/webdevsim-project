@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\ActionRespond.cs" />
     <Compile Include="Assets\Scripts\commandNavigation.cs" />
     <Compile Include="Assets\Scripts\gameNavigation.cs" />
+    <Compile Include="Assets\Scripts\pageElements.cs" />
     <Compile Include="Assets\Scripts\showUI.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Add.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Commands.cs" />

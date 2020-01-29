@@ -13,7 +13,6 @@ public class gameNavigation : MonoBehaviour
     [HideInInspector] public InteractableItems interactableItems;
 
     List<string> actionLog = new List<string>();
-
    
     void Awake()
     {
@@ -92,7 +91,7 @@ public class gameNavigation : MonoBehaviour
             return verbDictionary[noun];
         }
 
-        return "Not a possible action" + verb + " " + noun;
+        return "Not a possible action " + verb + " " + noun;
     }
 
     void ClearCollectionsForNewCommand()

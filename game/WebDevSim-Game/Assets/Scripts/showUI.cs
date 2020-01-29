@@ -1,34 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class showUI : MonoBehaviour
 {
-    public GameObject h1;
-    public GameObject h1BG;
+   public Text submitText;
+   public Image h1BG;
 
  
 
+    public InputField inputField;
+    private bool wasFocused;
 
+ 
     private void Awake()
     {
-        h1.SetActive(false);
-        h1BG.SetActive(false);
+        /*submitText.GetComponent<Text>().enabled = false;
+        h1BG.GetComponent<Image>().enabled = false;*/
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+         if(wasFocused && Input.GetKeyDown(KeyCode.Return))
         {
-            h1.SetActive(true);
-                      
+            submitText.GetComponent<Text>().enabled = true;
         }
-
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            h1BG.SetActive(true);
-        }
+        wasFocused = inputField.isFocused;
     }
+
+  /*  private void Submit(string text)
+    {
+        Debug.Log("Submit= " + text);
+    }*/
 }

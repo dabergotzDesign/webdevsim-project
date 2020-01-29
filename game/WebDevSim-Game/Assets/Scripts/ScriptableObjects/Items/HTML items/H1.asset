@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: H1
   m_EditorClassIdentifier: 
   noun: h1
+  pageText: Headline
   description: 'still an empty page, let''s create a headline.
 
     add <h1>Headline<h1/> to create a headline or
@@ -23,7 +24,5 @@ MonoBehaviour:
   interactions:
   - inputAction: {fileID: 11400000, guid: 852880d3d25b18944b4c824e9ef0b6d2, type: 2}
     textResponse: H1 tag is for a Headline on your page. Every page needs one.
-    actionResponse: {fileID: 0}
   - inputAction: {fileID: 11400000, guid: dcc28ce23f5190d4aac675eebdced449, type: 2}
     textResponse: you added a H1 to the index.html file
-    actionResponse: {fileID: 0}
