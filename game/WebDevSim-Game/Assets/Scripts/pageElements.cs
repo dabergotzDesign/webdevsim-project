@@ -8,9 +8,10 @@ public class pageElements : MonoBehaviour
     public InputField inputField;
     private bool wasFocused;
 
-    public InteractableObject pageObejct;
+    public InteractableObject pageObject;
     public Text elementText;
     public Image elementBackground;
+
 
     void Start()
     {
@@ -18,11 +19,11 @@ public class pageElements : MonoBehaviour
     }
 
     
-    void Update()
+    public void Update()
     {
         if (wasFocused && Input.GetKeyDown(KeyCode.Return))
         {
-            elementText.text = pageObejct.pageText;
+            elementText.text = pageObject.pageText;
         }
         wasFocused = inputField.isFocused;
     }

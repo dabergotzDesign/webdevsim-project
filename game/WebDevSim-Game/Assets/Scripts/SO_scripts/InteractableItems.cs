@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InteractableItems : MonoBehaviour
 {
-    public List<InteractableObject> usableItemList;
+    //public List<InteractableObject> usableItemList;
 
     public Dictionary<string, string> examineDictionary = new Dictionary<string, string>();
 
@@ -18,10 +18,23 @@ public class InteractableItems : MonoBehaviour
     List<string> nounsInInventory = new List<string>();
     gameNavigation controller;
 
- 
+    public InteractableObject pageObject;
+    public Text elementH1;
+    public Image elementBackground;
+    public Image elementImage;
+
+  
+
     private void Awake()
     {
         controller = GetComponent<gameNavigation>();
+    }
+
+    void Start()
+    {
+        elementH1.text = " ";
+        elementImage.GetComponent<Image>().enabled = false;
+
     }
 
     public string ObjectsNotInInventory(Commands currentCommand, int i)
@@ -44,7 +57,6 @@ public class InteractableItems : MonoBehaviour
         for (int i = 0; i < nounsInInventory.Count; i++)
         {
             string noun = nounsInInventory[i];
-
         }
     }
 
@@ -107,6 +119,9 @@ public class InteractableItems : MonoBehaviour
         {
             nounsInInventory.Add(noun);
             nounsInFile.Remove(noun);
+
+            DisplayPageElements();
+                     
             return addDictionary;
             
         }
@@ -115,6 +130,13 @@ public class InteractableItems : MonoBehaviour
             controller.LogStringWithReturn("It seems like you can't use " + noun + " not in here");
             return null;
         }
+    }
+
+    void DisplayPageElements()
+    {
+        elementH1.text = pageObject.pageText;
+        elementImage.GetComponent<Image>().enabled = true;
+
     }
 
 }
