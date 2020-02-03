@@ -1,5 +1,5 @@
 import React from 'react';
-import GameWindow from "../components/MyGame/Unity";
+import GameWindow from "./MyGame/Unity";
 
 const Game =()=>{
 return(

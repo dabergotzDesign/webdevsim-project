@@ -14,6 +14,7 @@ return(
    <Link to="/">Home</Link>
    <Link to="/about">About</Link>
    <Link to="/game">Game</Link>
+   <Link to="/comments">Comments</Link>
     </nav>
     )
 }

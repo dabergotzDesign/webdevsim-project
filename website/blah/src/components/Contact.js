@@ -1,15 +1,16 @@
 import React from 'react';
 import $ from "jquery";
-import Pillblock from "./Pillblock";
+import Pillblock from "./PillAnimation/Pillblock";
 
 const Contact =()=>{
+
   function run(e){
 $("button").addClass("slide-out-right");
   }
 
 return( 
     <section className="contact">
- <form
+ <form      className="contact-form"
             action="https://formspree.io/mjvyrkjr"
             method="POST"
             onSubmit={run}

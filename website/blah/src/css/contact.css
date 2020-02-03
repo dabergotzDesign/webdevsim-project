@@ -2,19 +2,19 @@
     display: flex;
     flex-flow: row nowrap;
 }
-form{
+.contact-form{
     width: 50%;
     margin:30px 0;
     border: 2px solid #f2d283;
     padding: 50px;
     justify-self: flex-start;
 }
-form ul{
+.contact-form ul{
    padding:0;
    list-style: none;
 }
-input,
-textarea,button {
+.contact-form input,
+.contact-form textarea,.contact-form button {
   width: 40vw;
   border: 2px solid transparent;
   margin: 5px;
@@ -23,18 +23,18 @@ textarea,button {
   color: #6ffce9;
   font-size: 1em;
 }
-textarea {
+.contact-form textarea {
   height: 20vw;
 }
-input::placeholder,
-textarea::placeholder {
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
   color: #6ffce9;
   text-align: left;
 }
 .contact ul li{
   border-bottom: 1px solid #ec6463;
 }
-button[type="submit"]{
+.contact-form button[type="submit"]{
   text-align:left;
   border: 1px solid #ec6463;
   padding:10px;

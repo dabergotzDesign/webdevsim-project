@@ -1,8 +1,8 @@
 .about{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-gap: 20px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: auto auto;
+grid-gap: 20px;
 }
 
 .text{
@@ -12,11 +12,13 @@ padding: 10px;
 margin:0 auto;
 height: fit-content;
 }
+
 .dennis-box, .katrin-box{
 border: 2px solid #e53889; 
 height: fit-content;
 clear:both;
 }
+
 .dennis-box{
 grid-area: 1/2/2/2;
 place-self: center end;

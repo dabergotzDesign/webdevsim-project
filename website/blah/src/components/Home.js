@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import Pills from "./PillPattern";
+import Pills from "./PillAnimation/PillPattern";
 
 const Home =()=>{
 return( 

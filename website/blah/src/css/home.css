@@ -70,11 +70,23 @@
      display: inline-flex;
     }
     .pill{
+      display:none;
       height:2em;
       border-radius:20px;
       margin: 0.5em;
       background-color: #ec6463;
     }
+    .animate{
+      animation: create 5s;
+    }
+    @keyframes create {
+      from { 
+          width: 0% 
+      }
+      to { 
+          width: 100% 
+      }
+  }
     .pill:hover{
       background-color: #f2d283;
     }
@@ -87,6 +99,8 @@
     .empty{
       background-color:transparent;
       width: 7em;
+    }
+    .one, .two, .three, .four, .five{
     }
     .one{
       width:5em;
