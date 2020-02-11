@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: H1
   m_EditorClassIdentifier: 
   noun: h1
-  pageText: Headline
+  imageElement: {fileID: 0}
+  textElement: Headline
+  elementEnabled: 0
   description: 'still an empty page, let''s create a headline.
 
     add <h1>Headline<h1/> to create a headline or

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class InteractableItems : MonoBehaviour
 {
-    //public List<InteractableObject> usableItemList;
 
     public Dictionary<string, string> examineDictionary = new Dictionary<string, string>();
 
@@ -18,25 +17,26 @@ public class InteractableItems : MonoBehaviour
     List<string> nounsInInventory = new List<string>();
     gameNavigation controller;
 
-    public InteractableObject pageObject;
-    public Text elementH1;
-    public Image elementBackground;
-    public Image elementImage;
+    /*//////////INTERACTABLE////////////*/
 
-  
+    //Page Interaction Objects
+    //public List<InteractableObject> Items = new List<InteractableObject>();
+    //public InteractableObject[] Items;
+
+    //public List<GameObject> pageElements = new List<GameObject>();
+    //public GameObject[] pageElements = GameObject.FindGameObjectsWithTag("Element");
+    public GameObject pageElement;
+
+    
+   
 
     private void Awake()
     {
         controller = GetComponent<gameNavigation>();
-    }
-
-    void Start()
-    {
-        elementH1.text = " ";
-        elementImage.GetComponent<Image>().enabled = false;
 
     }
 
+  
     public string ObjectsNotInInventory(Commands currentCommand, int i)
     {
         InteractableObject interactableInFile = currentCommand.interactableItemInFile[i];
@@ -52,29 +52,8 @@ public class InteractableItems : MonoBehaviour
 
     }
 
-    public void AddActionToUse()
-    {
-        for (int i = 0; i < nounsInInventory.Count; i++)
-        {
-            string noun = nounsInInventory[i];
-        }
-    }
-
-    /*
-    InteractableObject GetInteractableObjectToUse(string noun)
-    {
-        for (int i = 0; i < usableItemList.Count; i++)
-        {
-            if(usableItemList[i].noun == noun)
-            {
-                return usableItemList[i];
-            }
-        }
-        return null;
-    }
-    */
-
-   public void DisplayHelp()
+ 
+    public void DisplayHelp()
     {
 
         string helpCmdCreate = "> create - creates a file";
@@ -111,18 +90,40 @@ public class InteractableItems : MonoBehaviour
         nounsInFile.Clear();
     }
 
+  
+
     public Dictionary<string,string> Add (string[] seperatedInputWords)
     {
         string noun = seperatedInputWords[1];
 
+
         if (nounsInFile.Contains(noun))
         {
             nounsInInventory.Add(noun);
-            nounsInFile.Remove(noun);
 
-            DisplayPageElements();
+            //Display the corresponding page element
+            if(nounsInInventory != null)
+            {
+                pageElement = GameObject.FindWithTag(noun);
+
+             if (pageElement.GetComponent<Text>() != null)
+            {
+                    pageElement.GetComponentInChildren<Text>().enabled = true;
+            }
+
+            if (pageElement.GetComponent<Image>() != null)
+            {
+                    pageElement.GetComponentInChildren<Image>().enabled = true;
+            }
+
+                //Debug.Log(pageElement.name);
+            }
+
+            nounsInFile.Remove(noun);             
+            
                      
             return addDictionary;
+           
             
         }
         else
@@ -132,11 +133,31 @@ public class InteractableItems : MonoBehaviour
         }
     }
 
-    void DisplayPageElements()
+    void AddElement(string[] seperatedInputWords)
     {
-        elementH1.text = pageObject.pageText;
-        elementImage.GetComponent<Image>().enabled = true;
+        string noun = seperatedInputWords[1];
+
+        foreach (GameObject element in GameObject.FindGameObjectsWithTag(noun))
+        {
+
+            //Add element to List
+            //pageElements.Add(element);
+
+            //enable Component of element
+           /* if (element.GetComponent<Text>() != null)
+            {
+                element.GetComponentInChildren<Text>().enabled = true;
+            }
+
+            if (element.GetComponent<Image>() != null)
+            {
+                element.GetComponentInChildren<Image>().enabled = true;
+            }*/
+
+        }
+
 
     }
+
 
 }

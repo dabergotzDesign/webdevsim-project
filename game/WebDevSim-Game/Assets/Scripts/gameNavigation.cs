@@ -8,6 +8,7 @@ public class gameNavigation : MonoBehaviour
     public Text displayText;
     public InputAction[] inputActions;
 
+  
     [HideInInspector] public commandNavigation commandNavigation;
     [HideInInspector] public List<string> interactionDescriptions = new List<string>();
     [HideInInspector] public InteractableItems interactableItems;
@@ -24,6 +25,12 @@ public class gameNavigation : MonoBehaviour
     {
         DisplayCommandText();
         DisplayLoggedText();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+                
     }
 
     public void DisplayLoggedText()
@@ -79,6 +86,7 @@ public class gameNavigation : MonoBehaviour
                 if (interaction.inputAction.keyWord == "add") //"add", used for "add" elements to site (HTML lines, exp. <h1>)
                 {
                     interactableItems.addDictionary.Add(interactables.noun, interaction.textResponse);
+                   
                 }
             }
         }
@@ -106,9 +114,5 @@ public class gameNavigation : MonoBehaviour
         actionLog.Add(stringToAdd + "\n");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }

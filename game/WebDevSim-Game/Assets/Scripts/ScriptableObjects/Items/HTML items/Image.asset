@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Image
   m_EditorClassIdentifier: 
   noun: image
-  pageText: 
-  description: add an image.
+  imageElement: {fileID: 21300000, guid: d494b8603c3e5a04ea5b8ca73bebcae6, type: 3}
+  isDefaulItem: 0
+  elementText: 
+  description: add image.
   interactions:
   - inputAction: {fileID: 11400000, guid: 852880d3d25b18944b4c824e9ef0b6d2, type: 2}
     textResponse: <img/> adds an image

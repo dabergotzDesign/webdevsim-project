@@ -10,12 +10,18 @@ public class TextInput : MonoBehaviour
     gameNavigation controller;
 
 
-
     void Awake()
     {
         controller = GetComponent<gameNavigation>();
         inputField.onEndEdit.AddListener(AcceptStringInput);
     }
+
+   void Update()
+    {
+        //Check if something is added to Website/Game Environment
+    }
+
+
     void AcceptStringInput(string userInput)
     {
         userInput = userInput.ToLower();
