@@ -2,65 +2,69 @@ import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 
 const Input=()=>{
+  const nameInput=React.createRef();
+  const commentInput=React.createRef();
+  const fileInput=React.createRef(); 
   
-  const {nameInput,commentInput,fileInput}=React.createRef(); 
-  const [selectedFile, setFile] = useState(null);
   const [call, setCall]=useState({
     response:'',
     post:'',
     responseToPost:''
   })
   
-  useEffect(()=>{
+useEffect(()=>{
     callApi().then(res=>setCall({response:res.express})).catch(err=> console.log(err));
-  })
+  },[])
 
 async function callApi(){
 const response= await fetch('/api/hello');
 const body= await response.json();
+console.log(body)
 if(response.status !== 200) throw Error (body.message);
 return body;
   }
-  // function addPost(name, comment,file){
-  //   const post = {
-  //     name: name,
-  //     comment: comment,
-  //     date: new Date().toLocaleString(),
-  //     file:file,
-  //     showing: false
-  //   };
-  //   setFile(post);
-  // };
 
-async function handleSubmit(e){
+function addPost(name, comment,file){
+    const newPost = {
+      name: name,
+      comment: comment,
+      date: new Date().toLocaleString(),
+      file:file,
+      showing: false
+    }; 
+    // setCall({post:newPost});
+    console.log(newPost)
+  };
+  
+  async function handleSubmit(e){
     e.preventDefault();
-    const response=await fetch('/api/world',{
+    const name = nameInput.current.value.trim();
+    const comment = commentInput.current.value.trim();
+    const file = fileInput.current.value.trim();
+    addPost(name,comment,file)
+    const data = new FormData(e.target); 
+    setCall({post:data})
+  const response=await fetch('/api/world',{
       method:'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ post: call.post }),
+      body: JSON.stringify( call.post ),
     })
     const body=await response.text();
-    setCall({responseToPost:body})
-    // const name = nameInput.current.value.trim();
-    // const comment = commentInput.current.value.trim();
-    // const file = fileInput.current.value.trim();
-    // addPost(name,comment,file);
     
-    const data = new FormData(); 
-    data.append('file', selectedFile);
-    axios.post("/upload", data, { 
-    }).then(res => { 
-      console.log(res.statusText);
-    })
-    console.log("submitted");
+    setCall({responseToPost:body})
+    // axios.post("/upload", data, { 
+    // }).then(res => { 
+    //   console.log(res.statusText);
+    // })
+    // console.log("submitted");
     // e.currentTarget.reset();
   };
   
   function onChangeHandler(e){
-    setFile(e.target.files[0])
-    console.log(selectedFile)
+    // setFile(e.target.files[0])
+    // console.log(selectedFile)
   }
   
 return(
@@ -72,7 +76,7 @@ return(
           id="name"
           name="name"
           ref={nameInput}
-          /* call the ref with the 'ref' attribute */ required
+          required
         ></input>
         <br/>
         <label>comment</label>
@@ -88,7 +92,7 @@ return(
         </button>
         <br />
       </form>
-<p>{call.response}</p>
+<h1>{call.response}</h1>
     </div>
     )
 }

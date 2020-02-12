@@ -12,32 +12,29 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(cors());
 
 app.get('/api/hello', (req,res)=>{
-  res.send({express:'Hello from Express'})
+  res.send({express:`Hello from Express `})
 })
-
 
 app.listen(port, function() {
-  
-  console.log('App running on port 5000');
-  
+  console.log(`App running on port ${port}`);
 });
 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'public')
-  },
-  filename: function (req, file, cb) {
-    cb(null, Date.now() + '-' +file.originalname )
-  }
-})
+// const storage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, 'public')
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, Date.now() + '-' +file.originalname )
+//   }
+// })
 
 // let upload = multer({ storage: storage }).single("file");
 
 app.post(('/api/world'), (req,res)=>{
-  console.log(req.body);
+  console.log(req.body)
   res.send(
-    `I received your POST. This is what you send me: ${req.body.post}`,
-    ).next()
+    `I received your POST. This is what you send me: ${req.body}`,
+    )
   })
 
 // app.post('/upload',function(req, res) {

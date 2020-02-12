@@ -27,8 +27,8 @@
     "eject": "react-scripts eject",
     "watch": "nodemon ./server/server.js",
     "client": "cd client && yarn start",
-    "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"nodemon server\" \"nodemon client\""
+    "server": "node ./server/server.js",
+    "dev": "concurrently --kill-others-on-fail \"nodemon ./server/server.js\" \"nodemon client\""
   },
   "eslintConfig": {
     "extends": "react-app"

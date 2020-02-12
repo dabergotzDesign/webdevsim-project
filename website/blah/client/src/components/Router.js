@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import Nav from "./Nav";
 import App from "../App"
 import About from "./About";
@@ -21,6 +21,7 @@ const Router = () => {
     <Route exact path="/contact" component={Contact} />
     <Route exact path="/impressum" component={Impressum} />
     <Route exact path="/cookies" component={Cookies} />
+    <Redirect to="/" />
     </Switch>
     <Footer/>
   </BrowserRouter>
