@@ -88,6 +88,11 @@ public class gameNavigation : MonoBehaviour
                     interactableItems.addDictionary.Add(interactables.noun, interaction.textResponse);
                    
                 }
+                if (interaction.inputAction.keyWord == "background:") //"background", adds background image on "body"
+                {
+                    interactableItems.backgroundDictionary.Add(interactables.noun, interaction.textResponse);
+
+                }
             }
         }
     }

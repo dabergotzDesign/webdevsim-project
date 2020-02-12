@@ -12,9 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4d704e674a81a74a9bee8bcdc529a97, type: 3}
   m_Name: HTML
   m_EditorClassIdentifier: 
-  description: index.html file
+  description: 
   commandName: index.html
-  exits: []
+  exits:
+  - keyString: style.css
+    exitDescription: 
+    valueCommand: {fileID: 11400000, guid: 91d6b7778e1fb764082e636800fb8a57, type: 2}
   interactableItemInFile:
   - {fileID: 11400000, guid: c52d02dc5bc5ac849b573b493ac399fc, type: 2}
   - {fileID: 11400000, guid: 2857a27e65c75e84695ecdc010cb0bf2, type: 2}
+  - {fileID: 11400000, guid: 8f111e810f85e7d46b5bee290b890f65, type: 2}
+  - {fileID: 11400000, guid: d5b6730d8eb7d144683a18855550e3ab, type: 2}
+  - {fileID: 11400000, guid: b83f2d75f97602149a9a012a35facf5d, type: 2}

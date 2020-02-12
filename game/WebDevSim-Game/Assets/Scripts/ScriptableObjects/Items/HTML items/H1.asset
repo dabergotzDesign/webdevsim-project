@@ -16,15 +16,12 @@ MonoBehaviour:
   imageElement: {fileID: 0}
   textElement: Headline
   elementEnabled: 0
-  description: 'still an empty page, let''s create a headline.
-
-    add <h1>Headline<h1/> to create a headline or
-
-    you can examine what the h1 tag means by typing examine h1.
-
-'
+  description: 
   interactions:
   - inputAction: {fileID: 11400000, guid: 852880d3d25b18944b4c824e9ef0b6d2, type: 2}
     textResponse: H1 tag is for a Headline on your page. Every page needs one.
   - inputAction: {fileID: 11400000, guid: dcc28ce23f5190d4aac675eebdced449, type: 2}
-    textResponse: you added a H1 to the index.html file
+    textResponse: 'you added a H1 to the index.html file.
+
+
+      How about adding an image too?'

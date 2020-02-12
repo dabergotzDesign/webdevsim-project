@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4d704e674a81a74a9bee8bcdc529a97, type: 3}
   m_Name: CSS
   m_EditorClassIdentifier: 
-  description: style.css file
-  commandName: 
+  description: you're now on the style.css file.
+  commandName: style.css
   exits: []
-  interactableItemInFile: []
+  interactableItemInFile:
+  - {fileID: 11400000, guid: b569e555f222293478abde97a6f4c138, type: 2}
+  - {fileID: 11400000, guid: 6512fbd30f797074aa85b7830bb28a28, type: 2}
+  - {fileID: 11400000, guid: a28227f00b62a564b823b15493c5c6cd, type: 2}

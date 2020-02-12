@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\pageElements.cs" />
     <Compile Include="Assets\Scripts\showUI.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Add.cs" />
+    <Compile Include="Assets\Scripts\SO_scripts\Background.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Commands.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Create.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Examine.cs" />

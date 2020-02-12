@@ -12,23 +12,22 @@ public class InteractableItems : MonoBehaviour
 
     public Dictionary<string, string> addDictionary = new Dictionary<string, string>();
 
+    public Dictionary<string, string> backgroundDictionary = new Dictionary<string, string>();
+
     [HideInInspector] public List<string> nounsInFile = new List<string>();
 
     List<string> nounsInInventory = new List<string>();
     gameNavigation controller;
 
     /*//////////INTERACTABLE////////////*/
+    GameObject pageElement;
 
-    //Page Interaction Objects
-    //public List<InteractableObject> Items = new List<InteractableObject>();
-    //public InteractableObject[] Items;
+    /*///BACKGROUND IMAGES/////////*/
+    public Sprite backgroundImage_01; //code.jpg
+    public Sprite backgroundImage_02; //grid.jpg
+    public Sprite backgroundImage_03; //matrix.jpg
 
-    //public List<GameObject> pageElements = new List<GameObject>();
-    //public GameObject[] pageElements = GameObject.FindGameObjectsWithTag("Element");
-    public GameObject pageElement;
 
-    
-   
 
     private void Awake()
     {
@@ -36,7 +35,7 @@ public class InteractableItems : MonoBehaviour
 
     }
 
-  
+   
     public string ObjectsNotInInventory(Commands currentCommand, int i)
     {
         InteractableObject interactableInFile = currentCommand.interactableItemInFile[i];
@@ -52,7 +51,7 @@ public class InteractableItems : MonoBehaviour
 
     }
 
- 
+    /*//////////HELP/////////*/
     public void DisplayHelp()
     {
 
@@ -71,7 +70,7 @@ public class InteractableItems : MonoBehaviour
 
     }
 
- 
+    /*//////INVENTORY///////*/
     public void DisplayFile()
     {
         controller.LogStringWithReturn("You checking your files");
@@ -87,11 +86,12 @@ public class InteractableItems : MonoBehaviour
         examineDictionary.Clear();
         createDictionary.Clear();
         addDictionary.Clear();
+        backgroundDictionary.Clear();
         nounsInFile.Clear();
     }
 
   
-
+    /*////ADD THINGS TO WEBSITE////*/
     public Dictionary<string,string> Add (string[] seperatedInputWords)
     {
         string noun = seperatedInputWords[1];
@@ -133,31 +133,44 @@ public class InteractableItems : MonoBehaviour
         }
     }
 
-    void AddElement(string[] seperatedInputWords)
+
+    /*////BACKGROUND////*/
+    public Dictionary<string, string> Background (string[] seperatedInputWords)
     {
         string noun = seperatedInputWords[1];
 
-        foreach (GameObject element in GameObject.FindGameObjectsWithTag(noun))
+        string bgCode = "code.jpg";
+        string bgMatrix = "matrix.jpg";
+        string bgGrid = "grid.jpg";
+
+               
+
+        if (nounsInFile.Contains(noun))
         {
+            GameObject body = GameObject.FindGameObjectWithTag("background");
 
-            //Add element to List
-            //pageElements.Add(element);
-
-            //enable Component of element
-           /* if (element.GetComponent<Text>() != null)
+            if(noun == bgCode)
             {
-                element.GetComponentInChildren<Text>().enabled = true;
+                body.GetComponent<Image>().sprite = backgroundImage_01;
+                Debug.Log("got code.jpg as background");
             }
-
-            if (element.GetComponent<Image>() != null)
+            if (noun == bgGrid)
             {
-                element.GetComponentInChildren<Image>().enabled = true;
-            }*/
-
+                body.GetComponent<Image>().sprite = backgroundImage_02;
+                Debug.Log("got grid.jpg as background");
+            }
+            if (noun == bgMatrix)
+            {
+                body.GetComponent<Image>().sprite = backgroundImage_03;
+                Debug.Log("got matrix.jpg as background");
+            }
+            return backgroundDictionary;
         }
-
-
+        else
+        {
+            controller.LogStringWithReturn("That image file doesn't exist");
+            return null;
+        }
     }
-
 
 }

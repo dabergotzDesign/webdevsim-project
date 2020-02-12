@@ -18,7 +18,7 @@ MonoBehaviour:
   commandName: Intro
   exits:
   - keyString: index.html
-    exitDescription: after that go to the created file.
+    exitDescription: 
     valueCommand: {fileID: 11400000, guid: 7d88fa6f39571aa4c96eef808820df8b, type: 2}
   interactableItemInFile:
   - {fileID: 11400000, guid: d8aa5e45bbbac594db7d3affd78a2d76, type: 2}

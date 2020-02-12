@@ -7,6 +7,9 @@ TagManager:
   - Element
   - h1
   - image
+  - background
+  - main
+  - aside
   layers:
   - Default
   - TransparentFX

@@ -13,10 +13,15 @@ MonoBehaviour:
   m_Name: index.html
   m_EditorClassIdentifier: 
   noun: index.html
-  description: 
+  imageElement: {fileID: 0}
+  textElement: 
+  elementEnabled: 0
+  description: after that open the file.
   interactions:
   - inputAction: {fileID: 11400000, guid: 6fce83366d56f1e45a6a5b928249b961, type: 2}
     textResponse: 'you created index.html file.
 
-      Let''s go to the file.'
-    actionResponse: {fileID: 0}
+      Let''s open the file.'
+  - inputAction: {fileID: 11400000, guid: 852880d3d25b18944b4c824e9ef0b6d2, type: 2}
+    textResponse: '"html file" Hyper Markup Language. With HTML you can create your
+      own Website.'
