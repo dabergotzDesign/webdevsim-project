@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\SO_scripts\Examine.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Exit.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\FileInventory.cs" />
+    <Compile Include="Assets\Scripts\SO_scripts\FontSize.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Go.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Help.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\InputAction.cs" />

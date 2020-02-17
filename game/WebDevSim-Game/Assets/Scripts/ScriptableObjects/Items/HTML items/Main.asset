@@ -17,10 +17,10 @@ MonoBehaviour:
   textElement: 
   elementEnabled: 0
   description: "still an empty page.\r\nBefore we add content to the page we are going
-    to add a main.\r\nTo add type <main><main/>\r\n\r\nNotice these <> Symbols? These
+    to add a main.\r\nTo add type <main></main>\r\n\r\nNotice these <> Symbols? These
     are necessary to add something\r\nto your html. The first main is the start of
     the html tag and the second main\r\nmarks the end of the tag. Oh and don\u2019t
-    forget the / at the end of the second main.\r\n"
+    forget the / at the start of the second main.\r\n"
   interactions:
   - inputAction: {fileID: 11400000, guid: 852880d3d25b18944b4c824e9ef0b6d2, type: 2}
     textResponse: '"main" is a content divider. Used for to add content which should

@@ -18,6 +18,8 @@ public class InteractableItems : MonoBehaviour
 
     public Dictionary<string, string> colorDictionary = new Dictionary<string, string>();
 
+    public Dictionary<string, string> fontDictionary = new Dictionary<string, string>();
+
     [HideInInspector] public List<string> nounsInFile = new List<string>();
 
     List<string> nounsInInventory = new List<string>();
@@ -92,6 +94,7 @@ public class InteractableItems : MonoBehaviour
         addDictionary.Clear();
         backgroundDictionary.Clear();
         colorDictionary.Clear();
+        fontDictionary.Clear();
         nounsInFile.Clear();
     }
 
@@ -182,8 +185,6 @@ public class InteractableItems : MonoBehaviour
     public Dictionary<string, string> ColorText(string[] seperatedInputWords)
     {
         string noun = seperatedInputWords[1];
-
-        //string textColor = noun;
                 
         string h1 = "h1";
        
@@ -201,6 +202,28 @@ public class InteractableItems : MonoBehaviour
         else
         {
             controller.LogStringWithReturn("No color to change here");
+            return null;
+        }
+    }
+
+    public Dictionary<string, string> FontSize(string[] seperatedInputWords)
+    {
+        string noun = seperatedInputWords[1];
+        GameObject h1Size = GameObject.FindGameObjectWithTag("h1");
+
+        string px = "px";
+        int textSize = int.Parse(noun);
+         
+        string h1 = "h1";
+
+        if (nounsInInventory.Contains(h1) && textSize <= 100)
+        {
+            h1Size.GetComponent<Text>().fontSize = textSize;
+            //Debug.Log("changed size of h1");
+            return fontDictionary;
+        }
+        else
+        {
             return null;
         }
     }

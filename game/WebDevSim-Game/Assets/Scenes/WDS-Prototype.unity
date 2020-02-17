@@ -1181,6 +1181,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1b2bee45b40146245a2601bc0a997865, type: 2}
   - {fileID: 11400000, guid: 8e02ddbc967080445adfffee323fe4f9, type: 2}
   - {fileID: 11400000, guid: 71fb88013d3120841afb0ab9d8797fa8, type: 2}
+  - {fileID: 11400000, guid: c465b34f19da2714dbccec361cd6824a, type: 2}
   commandNavigation: {fileID: 0}
   interactionDescriptions: []
   interactableItems: {fileID: 0}
@@ -1451,18 +1452,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 32
+    m_FontSize: 0
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 120
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Healine
+  m_Text: Headline
 --- !u!222 &1753644104
 CanvasRenderer:
   m_ObjectHideFlags: 0
