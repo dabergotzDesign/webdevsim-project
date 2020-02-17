@@ -25,3 +25,5 @@ MonoBehaviour:
 
 
       How about adding an image too?'
+  - inputAction: {fileID: 11400000, guid: 71fb88013d3120841afb0ab9d8797fa8, type: 2}
+    textResponse: you gave your H1 a different color

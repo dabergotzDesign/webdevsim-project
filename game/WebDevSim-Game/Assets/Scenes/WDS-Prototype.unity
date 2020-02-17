@@ -1180,6 +1180,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6d2295125d6af2947b5205261ffb1b1f, type: 2}
   - {fileID: 11400000, guid: 1b2bee45b40146245a2601bc0a997865, type: 2}
   - {fileID: 11400000, guid: 8e02ddbc967080445adfffee323fe4f9, type: 2}
+  - {fileID: 11400000, guid: 71fb88013d3120841afb0ab9d8797fa8, type: 2}
   commandNavigation: {fileID: 0}
   interactionDescriptions: []
   interactableItems: {fileID: 0}
@@ -1461,7 +1462,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Headline
+  m_Text: Healine
 --- !u!222 &1753644104
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1526,7 +1527,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: d494b8603c3e5a04ea5b8ca73bebcae6, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

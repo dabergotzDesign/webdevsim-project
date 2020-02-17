@@ -21,3 +21,5 @@ MonoBehaviour:
   - inputAction: {fileID: 11400000, guid: 852880d3d25b18944b4c824e9ef0b6d2, type: 2}
     textResponse: '"Aside" is a content divider.Mostly used for as a navigation bar
       on the side of your page.'
+  - inputAction: {fileID: 11400000, guid: dcc28ce23f5190d4aac675eebdced449, type: 2}
+    textResponse: an aside was added to your page.

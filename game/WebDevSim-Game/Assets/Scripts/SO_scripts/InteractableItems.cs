@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
 public class InteractableItems : MonoBehaviour
 {
 
@@ -13,6 +15,8 @@ public class InteractableItems : MonoBehaviour
     public Dictionary<string, string> addDictionary = new Dictionary<string, string>();
 
     public Dictionary<string, string> backgroundDictionary = new Dictionary<string, string>();
+
+    public Dictionary<string, string> colorDictionary = new Dictionary<string, string>();
 
     [HideInInspector] public List<string> nounsInFile = new List<string>();
 
@@ -87,6 +91,7 @@ public class InteractableItems : MonoBehaviour
         createDictionary.Clear();
         addDictionary.Clear();
         backgroundDictionary.Clear();
+        colorDictionary.Clear();
         nounsInFile.Clear();
     }
 
@@ -152,23 +157,50 @@ public class InteractableItems : MonoBehaviour
             if(noun == bgCode)
             {
                 body.GetComponent<Image>().sprite = backgroundImage_01;
-                Debug.Log("got code.jpg as background");
+                //Debug.Log("got code.jpg as background");
             }
             if (noun == bgGrid)
             {
                 body.GetComponent<Image>().sprite = backgroundImage_02;
-                Debug.Log("got grid.jpg as background");
+                //Debug.Log("got grid.jpg as background");
             }
             if (noun == bgMatrix)
             {
                 body.GetComponent<Image>().sprite = backgroundImage_03;
-                Debug.Log("got matrix.jpg as background");
+                //Debug.Log("got matrix.jpg as background");
             }
             return backgroundDictionary;
         }
         else
         {
             controller.LogStringWithReturn("That image file doesn't exist");
+            return null;
+        }
+    }
+
+
+    public Dictionary<string, string> ColorText(string[] seperatedInputWords)
+    {
+        string noun = seperatedInputWords[1];
+
+        //string textColor = noun;
+                
+        string h1 = "h1";
+       
+
+        GameObject h1Color = GameObject.FindGameObjectWithTag("h1");
+
+
+        if (nounsInInventory.Contains(h1))
+        {
+            h1Color.GetComponent<Text>().supportRichText = true;
+            h1Color.GetComponent<Text>().text = $"<color={noun}>Headline</color>";
+            Debug.Log("changed color of Text");
+            return colorDictionary;
+        }
+        else
+        {
+            controller.LogStringWithReturn("No color to change here");
             return null;
         }
     }
