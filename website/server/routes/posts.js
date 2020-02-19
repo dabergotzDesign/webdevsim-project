@@ -6,8 +6,8 @@ router.get('/hello',function(req, res) {
 })
 
 router.post('/world', function(req, res) {
-  console.log(req.body.post)
-  res.send( `I received your POST. This is what you send me: ${req.body.post}`);
+  console.log(req.body)
+  res.send(req.body);
 });
 
 module.exports = router

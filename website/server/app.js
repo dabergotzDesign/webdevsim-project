@@ -6,7 +6,6 @@ var logger = require('morgan');
 const cors = require('cors');
 var indexRouter = require('./routes/index');
 var postsRouter = require('./routes/posts');
-
 var app = express();
 app.use(cors());
 
@@ -18,8 +17,7 @@ app.use(logger('dev'));
 app.use('/uploads',express.static('uploads'));
 
 app.use(express.json());
-app.use(express.bodyParser());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 

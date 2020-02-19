@@ -8,8 +8,8 @@ const Input=()=>{
   const fileInput=React.createRef(); 
   
   const [response, setResponse]=useState('')
-  const [post, addNewPost]=useState({})
-  const [responseToPost, setResponseToPost]=useState('')
+  const [post, addNewPost]=useState([])
+  const [responseToPost, setResponseToPost]=useState([])
   
 useEffect(()=>{
     callApi().then(res=>setResponse(res.express)).catch(err=> console.log(err));
@@ -31,8 +31,7 @@ function addPost(name, comment,file){
       file:file,
       showing: false
     }; 
-    //addNewPost({postList:{...newPost[uuid()]}});
-    addNewPost(post[uuid()]=newPost)
+    post.push(newPost)
     console.log(newPost)
     console.log(response)
     console.log(post)
@@ -52,11 +51,13 @@ function addPost(name, comment,file){
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.parse(JSON.stringify(post)),
-    }).then((res)=>res.json()).then((info)=>{console.log(info)})
+      body: JSON.stringify({post}),
+    })
+
     const body=await response.text();
     setResponseToPost(body)
-    console.log(body)
+
+    console.log(JSON.parse(body))
     console.log(response)
     console.log(post)
     console.log(responseToPost)
