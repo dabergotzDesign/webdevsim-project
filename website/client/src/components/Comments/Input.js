@@ -11,14 +11,13 @@ const Input=()=>{
   const [post, addNewPost]=useState([])
   const [responseToPost, setResponseToPost]=useState([])
   
-useEffect(()=>{
-    callApi().then(res=>setResponse(res.express)).catch(err=> console.log(err));
+useEffect((response)=>{
+    callApi().then(res=>setResponse(res.post)).catch(err=> console.log(err));
   },[])
 
 const callApi= async () =>{
-const response= await fetch('/api/hello');
-const body= await response.json();
-console.log(body)
+const response= await fetch('/comments');
+const body= await response.json()
 if(response.status !== 200) throw Error (body.message);
 return body;
   }
@@ -31,12 +30,8 @@ function addPost(name, comment,file){
       file:file,
       showing: false
     }; 
-    post.push(newPost)
-    console.log(newPost)
-    console.log(response)
-    console.log(post)
-    console.log(responseToPost)
-    return post
+    post.push(newPost);
+    // addNewPost([...post, newPost]);
   };
   
   const handleSubmit= async e => {
@@ -46,21 +41,15 @@ function addPost(name, comment,file){
     const file = fileInput.current.value.trim();
     addPost(name,comment,file)
 
-    const response=await fetch('/api/world',{
+    const response=await fetch('/comments',{
       method:'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({post}),
     })
-
     const body=await response.text();
     setResponseToPost(body)
-
-    console.log(JSON.parse(body))
-    console.log(response)
-    console.log(post)
-    console.log(responseToPost)
     // axios.post("/upload", data, { 
     // }).then(res => { 
     //   console.log(res.statusText);
@@ -99,7 +88,7 @@ return(
         </button>
         <br />
       </form>
-<h1>{responseToPost}</h1>
+<h1>{response}</h1>
     </div>
     )
 }
