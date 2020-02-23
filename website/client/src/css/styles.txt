@@ -1,8 +1,0 @@
-turquoise="#6ffce9";
-light-yellow="#f2d283";
-grey="#808080";
-light-black="#26263e";
-medium-pink="#e53889";
-medium-orange="#ec6463";
-
-font-family: 'Nova Mono', monospace;
