@@ -1,17 +1,15 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-webite/client/node_modules
-webite/server/node_modules
-webite/node_modules
+/node_modules
 /.pnp
 .pnp.js
 
 # testing
-webite/client/coverage
+/coverage
 
 # production
-webite/client/build
+/build
 
 # misc
 .DS_Store

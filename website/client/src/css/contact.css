@@ -1,0 +1,52 @@
+.contact{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.contact-form{
+    width: 50%;
+    margin:30px 0;
+    border: 2px solid #f2d283;
+    padding: 50px;
+    justify-self: flex-start;
+}
+.contact-form ul{
+   padding:0;
+   list-style: none;
+}
+.contact-form input,
+.contact-form textarea,.contact-form button {
+  width: 40vw;
+  border: 2px solid transparent;
+  margin: 5px;
+  padding: 5px;
+  background-color: transparent;
+  color: #6ffce9;
+  font-size: 1em;
+}
+.contact-form textarea {
+  height: 20vw;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #6ffce9;
+  text-align: left;
+}
+.contact ul li{
+  border-bottom: 1px solid #ec6463;
+}
+.contact-form button[type="submit"]{
+  text-align:left;
+  border: 1px solid #ec6463;
+  padding:10px;
+  margin-top:60px;
+  width: fit-content;
+  border-radius:20px;
+}
+.pill-contact{
+   align-self:center;
+   padding-left: 5%;
+}
+.pill-form{
+   display: flex;
+   flex-flow: column wrap;
+}

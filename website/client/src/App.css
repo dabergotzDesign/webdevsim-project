@@ -1,0 +1,14 @@
+@import "./css/nav.css";
+@import "./css/home.css";
+@import "./css/about.css";
+@import "./css/game.css";
+@import "./css/comments.css";
+@import "./css/animation.css";
+@import "./css/footer.css";
+@import "./css/contact.css";
+@import "./css/cookies.css";
+
+.App-header {
+    min-height: 50%;
+    padding-bottom: 10px;
+}

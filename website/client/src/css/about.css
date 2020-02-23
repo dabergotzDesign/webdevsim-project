@@ -1,0 +1,52 @@
+.about{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: auto auto;
+grid-gap: 20px;
+}
+
+.text{
+position: relative;
+text-align: justify;
+padding: 10px;
+margin:0 auto;
+height: fit-content;
+}
+
+.dennis-box, .katrin-box{
+border: 2px solid #e53889; 
+height: fit-content;
+clear:both;
+}
+
+.dennis-box{
+grid-area: 1/2/2/2;
+place-self: center end;
+width: 400px;
+}
+.katrin-box{
+grid-area: 1/1/1/1;
+width: 300px;
+}
+.Dennis, .Katrin{
+background-size: cover;
+width: 200px;
+height:200px;
+overflow: visible;
+border: 2px solid #ec6463;
+margin: 0 10px 0 10px;
+}
+.Dennis{
+float:left;  
+margin-left: -30%;
+background-image: url("../images/Dennis-big.png");
+}
+.Katrin{
+float:right;  
+margin-right:-35%;
+background-image: url("../images/Katrin-big.png");
+}
+.info{
+grid-area: 2/1/2/3;
+border: 2px solid #ec6463;
+}
