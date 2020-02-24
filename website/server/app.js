@@ -5,12 +5,14 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const cors = require('cors');
 const mongoose = require('mongoose');
+
 var indexRouter = require('./routes/index');
 var commentsRouter = require('./routes/comments');
+let imageRouter = require('./routes/images');
 
 var dotenv = require('dotenv');
 dotenv.config();
-var url = process.env.MONGOLAB_URI;
+var url = process.env.MONGO_URI;
 
 mongoose.connect(url, {
   useNewUrlParser: true,
@@ -34,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/comments', commentsRouter);
+app.use('/images', imageRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -49,6 +52,7 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+  console.log('This is the invalid field ->', err.field)
 });
 
 module.exports = app;

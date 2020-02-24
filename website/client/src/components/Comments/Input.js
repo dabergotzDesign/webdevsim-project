@@ -1,17 +1,21 @@
 import React,{useState,useEffect} from 'react';
 import uuid from "uuid/v4";
-// import axios from 'axios';
+import axios from 'axios';
 
 const Input=()=>{
   const nameInput=React.createRef();
   const commentInput=React.createRef();
-  const fileInput=React.createRef(); 
+  const imgRefInput=React.createRef(); 
   
   const [response, setResponse]=useState('')
   const [post, addNewPost]=useState([])
   const [responseToPost, setResponseToPost]=useState([])
+
+  const [multerImg, setMulterImg]=useState(null)
+  const [firebaseImg, setFirebaseImg]=useState(null)
+  const [baseImg, setBaseImg]=useState(null)
   
-useEffect((response)=>{
+useEffect(()=>{
     callApi().then(res=>setResponse(res.post)).catch(err=> console.log(err));
   },[])
 
@@ -22,12 +26,12 @@ if(response.status !== 200) throw Error (body.message);
 return body;
   }
 
-function addPost(name, comment,file){
+  function addPost(name, comment,imgRef){
     const newPost = {
       name: name,
       comment: comment,
       date: new Date().toLocaleString(),
-      file:file,
+      // imgRef:imgRef,
       showing: false
     }; 
     post.push(newPost);
@@ -38,9 +42,8 @@ function addPost(name, comment,file){
     e.preventDefault();
     const name = nameInput.current.value.trim();
     const comment = commentInput.current.value.trim();
-    const file = fileInput.current.value.trim();
-    addPost(name,comment,file)
-
+    const imgRef = imgRefInput.current.value.trim();
+    addPost(name,comment,imgRef)
     const response=await fetch('/comments',{
       method:'POST',
       headers: {
@@ -48,21 +51,28 @@ function addPost(name, comment,file){
       },
       body: JSON.stringify({post}),
     })
+    
     const body=await response.text();
     setResponseToPost(body)
-    // axios.post("/upload", data, { 
-    // }).then(res => { 
-    //   console.log(res.statusText);
-    // })
-    // console.log("submitted");
+    
+    // setMulterImg(URL.createObjectURL(baseImg))
+    let imgFormObj= new FormData();
+    imgFormObj.append('imageRef', imgRef)
+    imgFormObj.append('imageData', baseImg )
+    console.log(imgFormObj)
+    axios.post("images/upload", imgFormObj, { 
+    }).then(data => { 
+      console.log(data);
+    })
+    console.log("submitted");
     // e.currentTarget.reset();
   };
   
   function onChangeHandler(e){
-    // setFile(e.target.files[0])
-    // console.log(selectedFile)
+    setBaseImg(e.target.files[0])
+    console.log(e.target.files[0])
   }
-  
+
 return(
 <div>
       <form className="comment-form" encType="multipart/form-data" onSubmit={handleSubmit}>
@@ -80,7 +90,7 @@ return(
         <br/>
         <div>
         <label htmlFor="imgUpload">upload your website image here <i className="fas fa-chevron-circle-up"></i></label>
-        <input type="file" id="ref" ref={fileInput} name="file" accept="image/png, image/jpeg" onChange={onChangeHandler}/>
+        <input type="file" id="ref" ref={imgRefInput} name="file" accept="image/png, image/jpeg" onChange={onChangeHandler}/>
         </div>
         <br/>
         <button type="submit">
