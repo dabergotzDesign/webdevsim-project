@@ -5,12 +5,17 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const cors = require('cors');
 const mongoose = require('mongoose');
-
 var indexRouter = require('./routes/index');
 var commentsRouter = require('./routes/comments');
 
-const mongoConnectionString ='mongodb+srv://Pudelgulasch:<password>@cluster0-4fyqq.mongodb.net/test?retryWrites=true&w=majority';
-mongoose.connect(mongoConnectionString, {useNewUrlParser: true, useUnifiedTopology: true});
+var dotenv = require('dotenv');
+dotenv.config();
+var url = process.env.MONGOLAB_URI;
+
+mongoose.connect(url, {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true});
 
 var app = express();
 app.use(cors());
