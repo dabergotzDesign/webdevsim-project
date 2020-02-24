@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471dc4c484b45dd48b642b5497757180, type: 3}
   m_Name: H1
   m_EditorClassIdentifier: 
-  noun: h1
+  noun: <h1>gallery</h1>
   imageElement: {fileID: 0}
   textElement: Headline
   elementEnabled: 0
@@ -21,9 +21,14 @@ MonoBehaviour:
   - inputAction: {fileID: 11400000, guid: 852880d3d25b18944b4c824e9ef0b6d2, type: 2}
     textResponse: H1 tag is for a Headline on your page. Every page needs one.
   - inputAction: {fileID: 11400000, guid: dcc28ce23f5190d4aac675eebdced449, type: 2}
-    textResponse: 'you added a H1 to the index.html file.
-
-
-      How about adding an image too?'
+    textResponse: "you added a headline to your website.\r\n \nAlso noticed there
+      is something new on the page? We come later back to it and make it more readalbe.\r\nWhat
+      a Gallery needs are Images. Let\u2019s add 3 Images to the Gallery.\nAdding
+      an Image is a little different as adding a main or a h1.\r\nWe type <img_src=\u201DimageName.jpg\u201D>.
+      Note: \u201C_\u201D is usually a space,\r\nwe use it here only in the game.\r\nThe
+      src, the source, is the path of the image where it is saved locally on your
+      Computer. A few images were provided for you to use. Replace the \u201CimageName.jpg\u201D
+      with one of the names of the images.\r\nImages: \r\nfishes.jpg\r\nfox.jpg\r\r\nmonkey.jpg\r\n\nyou
+      can use the command check to see if enough images are added."
   - inputAction: {fileID: 11400000, guid: 71fb88013d3120841afb0ab9d8797fa8, type: 2}
     textResponse: you gave your H1 a different color

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/WDS-Prototype.unity
+- path: Assets/Scenes/WebDevSim.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

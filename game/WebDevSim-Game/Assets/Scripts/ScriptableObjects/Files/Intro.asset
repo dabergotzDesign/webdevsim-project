@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4d704e674a81a74a9bee8bcdc529a97, type: 3}
   m_Name: Intro
   m_EditorClassIdentifier: 
-  description: 'Hello WebDevSim.
-
-    First create a html file named "index",'
+  description: "Welcome to WebDevSim - A Web Development Simulator.\r\nThis game will
+    teach you basics on HTML, CSS and Javascript. Everything you learn can be used
+    to build a website on your own. \n\nMuch like text adventures you\r will write
+    in the different languages which are used in web development. Now let\u2019s get
+    down to business. As for every website we start on the HTML.\r\n"
   commandName: Intro
   exits:
   - keyString: index.html
-    exitDescription: 
+    exitDescription: "First we create a html file named \u201Cindex\u201D. "
     valueCommand: {fileID: 11400000, guid: 7d88fa6f39571aa4c96eef808820df8b, type: 2}
   interactableItemInFile:
   - {fileID: 11400000, guid: d8aa5e45bbbac594db7d3affd78a2d76, type: 2}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471dc4c484b45dd48b642b5497757180, type: 3}
   m_Name: code.jpg
   m_EditorClassIdentifier: 
-  noun: code.jpg
+  noun: url("images/code.jpg");
   imageElement: {fileID: 0}
   textElement: 
   elementEnabled: 0
@@ -22,4 +22,10 @@ MonoBehaviour:
     textResponse: '"body", it''s the pages body where all of the front end content
       gets displayed.'
   - inputAction: {fileID: 11400000, guid: 8e02ddbc967080445adfffee323fe4f9, type: 2}
-    textResponse: added Image to the body background.
+    textResponse: "A background image was added to the website\r\n        \r\nThe
+      Website looks now way better, right?\r\nUnfortunately our h1 is hard to read.
+      Luckily we can change this.\r\nSo now we focus on our h1, which inside of the
+      CSS looks like this:\r\nh1{ }.\r\nFirst we could do is to make the h1 more readable,
+      so we\u2019re change its color.\r\nWe write inside h1{ } just color: and name
+      a color like cyan, yellow or magenta.\r\nTry some different colors and see what
+      fits best."

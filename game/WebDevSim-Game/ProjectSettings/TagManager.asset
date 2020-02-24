@@ -5,11 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - Element
-  - h1
   - image
   - background
-  - main
-  - aside
+  - <main></main>
+  - <aside></aside>
+  - <h1>gallery</h1>
+  - <img_src="fishes.jpg">
+  - <img_src="fox.jpg">
+  - <img_src="monkey.jpg">
+  - <img_src="goldfishes.jpg">
+  - <img_src="abstract.jpg">
+  - <button>image01</button>
+  - <button>image02</button>
+  - <button>image03</button>
   layers:
   - Default
   - TransparentFX

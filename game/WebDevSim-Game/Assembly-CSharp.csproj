@@ -65,20 +65,25 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ActionRespond.cs" />
     <Compile Include="Assets\Scripts\commandNavigation.cs" />
+    <Compile Include="Assets\Scripts\galleryButtons.cs" />
     <Compile Include="Assets\Scripts\gameNavigation.cs" />
     <Compile Include="Assets\Scripts\hideShowUI.cs" />
     <Compile Include="Assets\Scripts\pageElements.cs" />
     <Compile Include="Assets\Scripts\showUI.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Add.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Background.cs" />
+    <Compile Include="Assets\Scripts\SO_scripts\Code.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Color.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Commands.cs" />
+    <Compile Include="Assets\Scripts\SO_scripts\Const.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Create.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Examine.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Exit.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\FileInventory.cs" />
+    <Compile Include="Assets\Scripts\SO_scripts\Finish.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\FontSize.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Go.cs" />
+    <Compile Include="Assets\Scripts\SO_scripts\HelloWorld.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Help.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\InputAction.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\InteractableItems.cs" />

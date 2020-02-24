@@ -93,6 +93,16 @@ public class gameNavigation : MonoBehaviour
                     interactableItems.backgroundDictionary.Add(interactables.noun, interaction.textResponse);
 
                 }
+                if (interaction.inputAction.keyWord == "const") //"background", adds background image on "body"
+                {
+                    interactableItems.constDictionary.Add(interactables.noun, interaction.textResponse);
+
+                }
+                if (interaction.inputAction.keyWord == "code") //"background", adds background image on "body"
+                {
+                    interactableItems.codeDictionary.Add(interactables.noun, interaction.textResponse);
+
+                }
             }
         }
     }

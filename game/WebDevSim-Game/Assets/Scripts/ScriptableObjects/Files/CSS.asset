@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4d704e674a81a74a9bee8bcdc529a97, type: 3}
+  m_Name: CSS
+  m_EditorClassIdentifier: 
+  description: "On here we can style everything and give the website more color.\r\nFirst
+    we will add a background to the website or rather the body.\r\nWhen we would like
+    to edit something in CSS we focus on the tag.\r\nFor example: body { }        \r\nInside
+    the curly brackets we write the use keywords and numbers to edit.\nTo add a background
+    image to the website we write\r\nbackground: url(\u201Cimages/imageName.jpg\u201D);.
+    Note that we close it with ;\r\nReplace \u201CimageName.jpg\u201D with one of
+    the images provided:\r\ncode.jpg\r\ngrid.jpg\r\nmatrix.jpg\r"
+  commandName: style.css
+  exits:
+  - keyString: index.html
+    exitDescription: 
+    valueCommand: {fileID: 11400000, guid: 8b6809b8dc96ddb4388cbd52048a0010, type: 2}
+  interactableItemInFile:
+  - {fileID: 11400000, guid: b569e555f222293478abde97a6f4c138, type: 2}
+  - {fileID: 11400000, guid: 6512fbd30f797074aa85b7830bb28a28, type: 2}
+  - {fileID: 11400000, guid: a28227f00b62a564b823b15493c5c6cd, type: 2}
+  - {fileID: 11400000, guid: 046cdd0169ca3b04c8da6a1c73f2e37a, type: 2}

@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4d704e674a81a74a9bee8bcdc529a97, type: 3}
-  m_Name: JS
+  m_Script: {fileID: 11500000, guid: 917f27c0cf155e14a8c1e6c3d0900870, type: 3}
+  m_Name: finish
   m_EditorClassIdentifier: 
-  description: main.js file
-  commandName: 
-  exits: []
-  interactableItemInFile: []
+  keyWord: finish

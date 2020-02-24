@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471dc4c484b45dd48b642b5497757180, type: 3}
   m_Name: Image
   m_EditorClassIdentifier: 
-  noun: image
+  noun: "<img src=\u201Dimages/image.jpg\u201D>"
   imageElement: {fileID: 21300000, guid: d494b8603c3e5a04ea5b8ca73bebcae6, type: 3}
   textElement: 
   elementEnabled: 0

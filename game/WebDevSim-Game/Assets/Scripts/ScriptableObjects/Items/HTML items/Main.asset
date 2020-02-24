@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471dc4c484b45dd48b642b5497757180, type: 3}
   m_Name: Main
   m_EditorClassIdentifier: 
-  noun: main
+  noun: <main></main>
   imageElement: {fileID: 0}
   textElement: 
   elementEnabled: 0
-  description: "still an empty page.\r\nBefore we add content to the page we are going
-    to add a main.\r\nTo add type <main></main>\r\n\r\nNotice these <> Symbols? These
-    are necessary to add something\r\nto your html. The first main is the start of
-    the html tag and the second main\r\nmarks the end of the tag. Oh and don\u2019t
-    forget the / at the start of the second main.\r\n"
+  description: "still empty, huh.\r\nBefore we add visible content to the website,
+    we have to prepare the site, so we are going to at first add a main.\r\nTo add
+    type <main></main>\r\n\r\nNotice these <> Symbols? These are necessary to add
+    something\r\nto your html. The first main is the start of the html tag and the
+    second main\r\nmarks the end of the tag. Oh and don\u2019t forget the / at the
+    end of the second main.\r\n"
   interactions:
   - inputAction: {fileID: 11400000, guid: 852880d3d25b18944b4c824e9ef0b6d2, type: 2}
     textResponse: '"main" is a content divider. Used for to add content which should
       show the main point of your page.'
   - inputAction: {fileID: 11400000, guid: dcc28ce23f5190d4aac675eebdced449, type: 2}
-    textResponse: 'added main
-
-'
+    textResponse: "you\u2019re added a main to the website.\r\n\r\nGood, what we also
+      need for your website is an Aside, this will be used for the navigation."

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4d704e674a81a74a9bee8bcdc529a97, type: 3}
+  m_Name: JS
+  m_EditorClassIdentifier: 
+  description: 'Before we code anything, we are going to check if the file is connected
+    to the HTML. To check, the easiest way is to have a console log.
+
+    We just type console.log("HelloWorld"); and see if it''s responds with the string
+    we put in it.'
+  commandName: main.js
+  exits: []
+  interactableItemInFile:
+  - {fileID: 11400000, guid: 55a3f05e2384edc40b16237c3ebade1f, type: 2}
+  - {fileID: 11400000, guid: 2ab80f897e3d1f74fa535d6e1916c5cb, type: 2}
+  - {fileID: 11400000, guid: df9bb5aba58ab4741b0f1781901f6c23, type: 2}
+  - {fileID: 11400000, guid: 92332c4e4f7d5ba468b23e1ea752a0f5, type: 2}
+  - {fileID: 11400000, guid: 6bc76967ad5266042b0209647de6ca73, type: 2}
+  - {fileID: 11400000, guid: 74e533fa29425994cbd28789fa287ad7, type: 2}
+  - {fileID: 11400000, guid: 1a211041e06e914439e178a8797b2b44, type: 2}
+  - {fileID: 11400000, guid: 58dca7d6092e08e4d91cfd3d774d430d, type: 2}
+  - {fileID: 11400000, guid: 6a1d39b41bd62db49bc277700cfb00ff, type: 2}
+  - {fileID: 11400000, guid: 11f4f9136d14b2144926aae4cdca103b, type: 2}

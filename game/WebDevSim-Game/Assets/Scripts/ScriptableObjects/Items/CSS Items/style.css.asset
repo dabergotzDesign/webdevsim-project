@@ -21,4 +21,6 @@ MonoBehaviour:
   - inputAction: {fileID: 11400000, guid: 852880d3d25b18944b4c824e9ef0b6d2, type: 2}
     textResponse: CSS - Cascading Style Sheet, let's you style all your elements.
   - inputAction: {fileID: 11400000, guid: 6fce83366d56f1e45a6a5b928249b961, type: 2}
-    textResponse: you created a style.css file.
+    textResponse: 'you created a style.css file.
+
+      Let''s open the new file.'
