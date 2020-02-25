@@ -212,7 +212,7 @@ public class InteractableItems : MonoBehaviour
                 
         string h1 = "<h1>gallery</h1>";
 
-        string colorMessage = "changed color of h1. \nFor the h1, it’s still way to small to read easily. Let’s change the size of it.\nWe still focus on our h1 so we can change the size of the headline by writing\nfont-size: number px; \nThe unit we use are pixels and we should not go higher than 100px.";
+        string colorMessage = "changed color of h1.\nFor the h1, it’s still way to small to read easily. Let’s change the size of it.\nWe still focus on our h1 so we can change the size of the headline by writing\nfont-size: number px; \nThe unit we use are pixels and we should not go higher than 100px.";
        
 
         GameObject h1Color = GameObject.FindGameObjectWithTag("<h1>gallery</h1>");
@@ -239,7 +239,7 @@ public class InteractableItems : MonoBehaviour
         string noun = seperatedInputWords[1];
         GameObject h1Size = GameObject.FindGameObjectWithTag("<h1>gallery</h1>");
 
-        string sizeMessage = "changed size of h1. \nNow we’re fine. CSS provides you with way more things to edit, but we are fine as it is right now.\nLet’s focus back on our images in our gallery.\nSo we go back to our index.html and add three buttons to our website.";
+        string sizeMessage = "changed size of h1. \nNow we’re fine. CSS provides you with way more things to edit, but we are good now.\nLet’s focus back on our images in our gallery.\nSo we go back to our index.html and add three buttons to our website.";
         //string px = "px";
         int textSize = int.Parse(noun);
          
