@@ -212,7 +212,7 @@ public class InteractableItems : MonoBehaviour
                 
         string h1 = "<h1>gallery</h1>";
 
-        string colorMessage = "changed color of h1. \nFor the h1, it’s still small to read easily. Let’s change the size of it. \nWe still focus on our h1 so we can change the size by writing font-size: number px; \nThe unit we use are pixels and we should not go higher than 100px.";
+        string colorMessage = "changed color of h1. \nFor the h1, it’s still way to small to read easily. Let’s change the size of it.\nWe still focus on our h1 so we can change the size of the headline by writing\nfont-size: number px; \nThe unit we use are pixels and we should not go higher than 100px.";
        
 
         GameObject h1Color = GameObject.FindGameObjectWithTag("<h1>gallery</h1>");
@@ -239,7 +239,7 @@ public class InteractableItems : MonoBehaviour
         string noun = seperatedInputWords[1];
         GameObject h1Size = GameObject.FindGameObjectWithTag("<h1>gallery</h1>");
 
-        string sizeMessage = "changed size of h1. \nNow we’re fine. CSS provides you with way more things to edit, but we are fine as it is right now.\n Let’s focus back on our images in our gallery.\n So we go back to our index.html and add three buttons to our website.";
+        string sizeMessage = "changed size of h1. \nNow we’re fine. CSS provides you with way more things to edit, but we are fine as it is right now.\nLet’s focus back on our images in our gallery.\nSo we go back to our index.html and add three buttons to our website.";
         //string px = "px";
         int textSize = int.Parse(noun);
          
@@ -264,7 +264,7 @@ public class InteractableItems : MonoBehaviour
     //Command: console.log("HelloWorld");
     public void DisplayHelloWorld()
     {
-        string ifResponded = "It works, now we can go on.\nWhen we want to see the images we are going to connect them to the buttons.\nIf you click on one button one image will be shown, a different image for every button.\nSo we are going to first refer to an image component.The best way to refer to a component is to give it a class. In our case the images will have an id,\nlike: id=”galleryImage”.";
+        string ifResponded = "It works, now we can go on.\nWhen we want to see the images we are going to connect them to the buttons.\nIf you click on one button one image will be shown, a different image for every button.\nSo we are going to first refer to an image component.The best way to refer to a component is to give it either an \"id\" or a \"class\". In our case the images will have an \"id\",\nlike: id=\"galleryImage\".";
         string getElement = "Since we’re now on our javascript file, we can refer to an image component by adding a variable. Which goes like this:\nconst image1= document.getElementById(\"IdName\");\nOur Images have the IDs img1,img2 and img3.";
         
         controller.LogStringWithReturn("HelloWorld");
@@ -294,15 +294,18 @@ public class InteractableItems : MonoBehaviour
             //CONST IMAGES
             if (nounsInInventory.Contains(noun) && noun == gImg1)
             {
-               controller.LogStringWithReturn("added const image to your main.js" + "\n" + "after all three buttons got an id, we have to code what they have to do.\nWe want to make them to display the images from the gallery.");
+                return constDictionary;
+                //controller.LogStringWithReturn("added const image to your main.js" + "\n" + "after all three buttons got an id, we have to code what they have to do.\nWe want to make them to display the images from the gallery.");
             }
             if (nounsInInventory.Contains(noun) && noun == gImg2)
             {
-                controller.LogStringWithReturn("added const image to your main.js" + "\n" + "after all three buttons got an id, we have to code what they have to do.\nWe want to make them to display the images from the gallery.");
+                return constDictionary;
+                //controller.LogStringWithReturn("added const image to your main.js" + "\n" + "after all three buttons got an id, we have to code what they have to do.\nWe want to make them to display the images from the gallery.");
             }
             if (nounsInInventory.Contains(noun) && noun == gImg3)
             {
-                controller.LogStringWithReturn("added const image to your main.js" + "\n" + "after all three buttons got an id, we have to code what they have to do.\nWe want to make them to display the images from the gallery.");
+                return constDictionary;
+                //controller.LogStringWithReturn("added const image to your main.js" + "\n" + "after all three buttons got an id, we have to code what they have to do.\nWe want to make them to display the images from the gallery.");
             }
 
             //CONST BUTTONS
@@ -336,7 +339,7 @@ public class InteractableItems : MonoBehaviour
         string noun = seperatedInputWords[1];
 
         string addEvent1 = "button1.addeventlistener(\"click\",()=>{image.src=\"images/fishes.jpg\")};";
-        string addEvent2 = "butto2.addeventlistener(\"click\",()=>{image.src=\"images/fox.jpg\")};";
+        string addEvent2 = "button2.addeventlistener(\"click\",()=>{image.src=\"images/fox.jpg\")};";
         string addEvent3 = "button3.addeventlistener(\"click\",()=>{image.src=\"images/monkey.jpg\")};";
    
         if (nounsInFile.Contains(noun))

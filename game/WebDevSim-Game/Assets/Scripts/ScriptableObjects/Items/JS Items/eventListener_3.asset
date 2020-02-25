@@ -19,8 +19,9 @@ MonoBehaviour:
   description: 
   interactions:
   - inputAction: {fileID: 11400000, guid: 0dbcb7416e2c6a44c9d76af06a102387, type: 2}
-    textResponse: "added Event to button3. Button3 is now usable.\n\nall buttons are
-      now interactable. We got our Gallery done. Try it out.\n\nWe could do many more
-      things for the Website but that is everything for the basic of creating a website.
-      I hope WebDevSim has taught you everything to make a real website, made all
-      by yourself. What is left is to finish the game. Why not by typing \u201Cfinish\u201D.\n"
+    textResponse: "added Event to button3. Button3 can show monkey.jpg.\n\nall buttons
+      are now interactable. We got our Gallery done. Try it out.\n\nWe could do many
+      more things for the Website but that is everything for the basics of creating
+      a website. I hope WebDevSim has taught you everything to make a real website,
+      made all by yourself. What is left is to finish the game. Why not by typing
+      \u201Cfinish\u201D.\n"

@@ -10,14 +10,12 @@ TagManager:
   - <main></main>
   - <aside></aside>
   - <h1>gallery</h1>
-  - <img_src="fishes.jpg">
-  - <img_src="fox.jpg">
-  - <img_src="monkey.jpg">
-  - <img_src="goldfishes.jpg">
-  - <img_src="abstract.jpg">
   - <button>image01</button>
   - <button>image02</button>
   - <button>image03</button>
+  - <img_src="images/fishes.jpg">
+  - <img_src="images/fox.jpg">
+  - <img_src="images/monkey.jpg">
   layers:
   - Default
   - TransparentFX

@@ -19,4 +19,15 @@ MonoBehaviour:
   description: 
   interactions:
   - inputAction: {fileID: 11400000, guid: e6bf02df1294f2d41ab91aa4f780a53c, type: 2}
-    textResponse: 
+    textResponse: 'const image3 is added
+
+
+      We have a reference to the images, but we still need a reference to the buttons.
+      Similar to the images the const look like this:
+
+      button1=document.getElementById("btn1");
+
+
+      button2 = "btn2"
+
+      button3 = "btn3"'

@@ -19,8 +19,7 @@ MonoBehaviour:
   description: 
   interactions:
   - inputAction: {fileID: 11400000, guid: dcc28ce23f5190d4aac675eebdced449, type: 2}
-    textResponse: 'created a button
+    textResponse: 'created button "image02"
 
 
-      after adding all three buttons we create a main.js. The javascript file in which
-      we do some programming.'
+      button "image03" left'

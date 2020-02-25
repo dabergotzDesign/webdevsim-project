@@ -19,4 +19,4 @@ MonoBehaviour:
   description: 
   interactions:
   - inputAction: {fileID: 11400000, guid: e6bf02df1294f2d41ab91aa4f780a53c, type: 2}
-    textResponse: 
+    textResponse: const image1 is added

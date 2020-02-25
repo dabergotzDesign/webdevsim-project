@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471dc4c484b45dd48b642b5497757180, type: 3}
   m_Name: Image-fox
   m_EditorClassIdentifier: 
-  noun: <img_src="fox.jpg">
+  noun: <img_src="images/fox.jpg">
   imageElement: {fileID: 21300000, guid: 50fba5bc72dc4cb45b88a1fccbcf482f, type: 3}
   textElement: 
   elementEnabled: 0
@@ -22,8 +22,5 @@ MonoBehaviour:
     textResponse: <img src=""> adds an Image to the website. It can be displayed from
       an url or when it is saved on your computer.
   - inputAction: {fileID: 11400000, guid: dcc28ce23f5190d4aac675eebdced449, type: 2}
-    textResponse: "added <img> to your website\n\r\nIf three images are added we can
-      go on. You probably noticed we only see one image right now, but no need to
-      worry, you\u2019ll see them soon enough.\r\nThe website still could get some
-      more style, don\u2019t you think? To give it more color we use a CSS file. Let\u2019s
-      create a file with the name style. \r\n"
+    textResponse: "added <img> to your website\n\r\nonly the monkey.jpg is left to
+      add.\r"

@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 115704336}
   m_Layer: 5
   m_Name: Image-monkey
-  m_TagString: <img_src="monkey.jpg">
+  m_TagString: <img_src="images/monkey.jpg">
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1461,6 +1461,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ba4b566eef4d147b3a1a7739eb0cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image1: {fileID: 1913282761}
+  image2: {fileID: 1999333913}
+  image3: {fileID: 115704336}
 --- !u!1 &996614543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2053,6 +2056,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ba4b566eef4d147b3a1a7739eb0cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image1: {fileID: 0}
+  image2: {fileID: 0}
+  image3: {fileID: 0}
 --- !u!1 &1703129680
 GameObject:
   m_ObjectHideFlags: 0
@@ -2297,7 +2303,7 @@ GameObject:
   - component: {fileID: 1913282761}
   m_Layer: 5
   m_Name: Image-fishes
-  m_TagString: <img_src="fishes.jpg">
+  m_TagString: <img_src="images/fishes.jpg">
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2445,7 +2451,7 @@ GameObject:
   - component: {fileID: 1999333913}
   m_Layer: 5
   m_Name: Image-fox
-  m_TagString: <img_src="fox.jpg">
+  m_TagString: <img_src="images/fox.jpg">
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

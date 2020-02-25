@@ -19,7 +19,7 @@ MonoBehaviour:
   description: 
   interactions:
   - inputAction: {fileID: 11400000, guid: 0dbcb7416e2c6a44c9d76af06a102387, type: 2}
-    textResponse: 'added Event to button2. Button2 is now usable.
+    textResponse: 'added Event to button2. Button2 can show fox.jpg.
 
 
-      On to the next button.'
+      button3 with monkey.jpg waits for you.'
