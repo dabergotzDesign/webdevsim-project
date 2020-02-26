@@ -1,20 +1,23 @@
 import React,{useState,useEffect} from 'react';
 import uuid from "uuid/v4";
-// import axios from 'axios';
+import {storage} from "../../firebase/firebase"
+import axios from 'axios';
 
 const Input=()=>{
   const nameInput=React.createRef();
   const commentInput=React.createRef();
-  const fileInput=React.createRef(); 
   
-  const [response, setResponse]=useState('')
-  const [post, addNewPost]=useState([])
-  const [responseToPost, setResponseToPost]=useState([])
-  
-useEffect((response)=>{
-    callApi().then(res=>setResponse(res.post)).catch(err=> console.log(err));
-  },[])
+  const [response, setResponse]=useState([])
+  const [post, addNewPost]=useState('')
+  const [responseToPost, setResponseToPost]=useState('')
 
+  const [baseImg, setBaseImg]=useState('')
+  const allInputs={}
+  const [imageAsUrl, setImageAsUrl] = useState(allInputs)
+
+useEffect(()=>{
+    callApi().then(res=>setResponse(res.Comment)).catch(err=> console.log(err));
+  },[])
 const callApi= async () =>{
 const response= await fetch('/comments');
 const body= await response.json()
@@ -22,25 +25,27 @@ if(response.status !== 200) throw Error (body.message);
 return body;
   }
 
-function addPost(name, comment,file){
-    const newPost = {
-      name: name,
-      comment: comment,
+function addPost(name, comment){
+    let newPost = {
+      name,
+      comment,
       date: new Date().toLocaleString(),
-      file:file,
+      id:uuid(),
+      imgURL:imageAsUrl.imgUrl, //SET URL BEFORE NEW POST
       showing: false
     }; 
-    post.push(newPost);
-    // addNewPost([...post, newPost]);
+    addNewPost(newPost);
   };
-  
+
   const handleSubmit= async e => {
     e.preventDefault();
+    e.target.reset();
+    setBaseImg('')
+    
     const name = nameInput.current.value.trim();
     const comment = commentInput.current.value.trim();
-    const file = fileInput.current.value.trim();
-    addPost(name,comment,file)
-
+    addPost(name,comment)
+    
     const response=await fetch('/comments',{
       method:'POST',
       headers: {
@@ -48,23 +53,37 @@ function addPost(name, comment,file){
       },
       body: JSON.stringify({post}),
     })
+    
     const body=await response.text();
     setResponseToPost(body)
-    // axios.post("/upload", data, { 
-    // }).then(res => { 
-    //   console.log(res.statusText);
-    // })
-    // console.log("submitted");
-    // e.currentTarget.reset();
-  };
-  
-  function onChangeHandler(e){
-    // setFile(e.target.files[0])
-    // console.log(selectedFile)
-  }
-  
+    
+    if (baseImg !== null){   
+      const uploadTask=storage.ref(`/images/${post.id}`).put(baseImg) 
+      
+      //initiates the firebase side uploading 
+      uploadTask.on('state_changed', 
+      (snapShot) => {
+        //takes a snap shot of the process as it is happening
+        // console.log(snapShot)
+      }, (err) => {
+        //catches the errors
+        console.log(err)
+      }, () => {
+        // gets the functions from storage refences the image storage in firebase by the children
+        // gets the download url then sets the image from firebase as the value for the imgUrl key:
+        storage.ref('images').child(post.id).getDownloadURL()
+       .then(fireBaseUrl => {
+         setImageAsUrl(prevObject => ({...prevObject, imgUrl: fireBaseUrl}))
+        })
+      })
+}};
+            
+function onChangeHandler(e){
+              setBaseImg(e.target.files[0])
+            }
+
 return(
-<div>
+    <div>
       <form className="comment-form" encType="multipart/form-data" onSubmit={handleSubmit}>
         <label>name</label>
         <input
@@ -80,7 +99,7 @@ return(
         <br/>
         <div>
         <label htmlFor="imgUpload">upload your website image here <i className="fas fa-chevron-circle-up"></i></label>
-        <input type="file" id="ref" ref={fileInput} name="file" accept="image/png, image/jpeg" onChange={onChangeHandler}/>
+        <input type="file" id="ref" name="file" accept="image/png, image/jpeg" onChange={onChangeHandler}/>
         </div>
         <br/>
         <button type="submit">
@@ -88,9 +107,15 @@ return(
         </button>
         <br />
       </form>
-<h1>{response}</h1>
-    </div>
-    )
+      {response.map((el,i)=>{
+  return <div key={i} >
+<p>{el._id}</p>
+<p>{el.name}</p>
+</div>
+})}
+<img src={imageAsUrl.imgUrl} alt="websitePic"/>
+</div>
+)
 }
  
 export default Input;

@@ -35,6 +35,9 @@ h1,h2,h3{
 p{
   color:white;
 }
+img{
+  width: 100px;
+}
 @media(max-width: 768px) { 
 .home{
   height: 95vh;
