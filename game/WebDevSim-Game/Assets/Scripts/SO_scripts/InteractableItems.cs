@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 
@@ -41,6 +42,10 @@ public class InteractableItems : MonoBehaviour
     public Button buttonToUnlock1;
     public Button buttonToUnlock2;
     public Button buttonToUnlock3;
+
+    /*///SceneTransition///*/
+    public Animator transition;
+    public float transitionTime = 1f;
 
 
     private void Awake()
@@ -377,10 +382,11 @@ public class InteractableItems : MonoBehaviour
         StartCoroutine(LoadCredits()); 
     }
 
-
     IEnumerator LoadCredits()
     {
-        yield return new WaitForSeconds(3);
-        Debug.Log("Load Credits");
+        transition.SetTrigger("start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(sceneBuildIndex: 2);
+    
     }
 }

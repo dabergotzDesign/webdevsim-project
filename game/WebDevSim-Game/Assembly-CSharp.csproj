@@ -63,11 +63,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\button.cs" />
     <Compile Include="Assets\Scripts\ActionRespond.cs" />
     <Compile Include="Assets\Scripts\commandNavigation.cs" />
     <Compile Include="Assets\Scripts\galleryButtons.cs" />
     <Compile Include="Assets\Scripts\gameNavigation.cs" />
     <Compile Include="Assets\Scripts\hideShowUI.cs" />
+    <Compile Include="Assets\Scripts\menu script\menu.cs" />
+    <Compile Include="Assets\Scripts\menu script\scenetransition.cs" />
     <Compile Include="Assets\Scripts\pageElements.cs" />
     <Compile Include="Assets\Scripts\showUI.cs" />
     <Compile Include="Assets\Scripts\SO_scripts\Add.cs" />

@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/WDS-Prototype.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Home Scene.unity
     guid: b946b39e62ed26d41903a62ed0540c15
   - enabled: 1
+    path: Assets/Scenes/WebDevSim.unity
+    guid: b0b4d872bd5fe4d4eaf4e89730bda18a
+  - enabled: 1
     path: Assets/Scenes/Credits.unity
-    guid: bf791ba2140146589ac863e9f2627a61
+    guid: 89ab72a21c9ac7e4e80c9cb166d6a515
   m_configObjects: {}
