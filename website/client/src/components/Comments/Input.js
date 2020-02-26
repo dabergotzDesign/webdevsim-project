@@ -8,7 +8,7 @@ const Input=()=>{
   const commentInput=React.createRef();
   
   const [response, setResponse]=useState([])
-  const [comment, addNewComment]=useState('')
+  const [post, addNewPost]=useState('')
   const [responseToPost, setResponseToPost]=useState('')
 
   const [baseImg, setBaseImg]=useState('')
@@ -26,7 +26,7 @@ return body;
   }
 
 function addPost(name, comment){
-    let newComment = {
+    let newPost = {
       name,
       comment,
       date: new Date().toLocaleString(),
@@ -34,12 +34,12 @@ function addPost(name, comment){
       imgURL:imageAsUrl.imgUrl, //SET URL BEFORE NEW POST
       showing: false
     }; 
-    addNewComment(newComment);
+    addNewPost(newPost);
   };
-  
+
   const handleSubmit= async e => {
     e.preventDefault();
-    // e.target.reset();
+    e.target.reset();
     setBaseImg('')
     
     const name = nameInput.current.value.trim();
@@ -51,14 +51,14 @@ function addPost(name, comment){
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({comment}),
+      body: JSON.stringify({post}),
     })
     
     const body=await response.text();
     setResponseToPost(body)
     
     if (baseImg !== null){   
-      const uploadTask=storage.ref(`/images/${comment.id}`).put(baseImg) 
+      const uploadTask=storage.ref(`/images/${post.id}`).put(baseImg) 
       
       //initiates the firebase side uploading 
       uploadTask.on('state_changed', 
@@ -71,7 +71,7 @@ function addPost(name, comment){
       }, () => {
         // gets the functions from storage refences the image storage in firebase by the children
         // gets the download url then sets the image from firebase as the value for the imgUrl key:
-        storage.ref('images').child(comment.id).getDownloadURL()
+        storage.ref('images').child(post.id).getDownloadURL()
        .then(fireBaseUrl => {
          setImageAsUrl(prevObject => ({...prevObject, imgUrl: fireBaseUrl}))
         })

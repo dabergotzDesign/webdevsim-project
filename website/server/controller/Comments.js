@@ -2,7 +2,7 @@ const mongoose=require('mongoose');
 const Comment= require('../models/Comment');
 
 const createComment=(req, res)=> {
-    console.log(req.body)
+    console.log(req.body);
     const newComment=new Comment({
         _id: mongoose.Types.ObjectId(),
         name:req.body.post.name,
