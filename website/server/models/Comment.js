@@ -2,7 +2,7 @@ const mongoose=require('mongoose');
 const {Schema}=mongoose;
 
 let CommentSchema=new Schema({
-    _id: mongoose.Types.ObjectId,
+    _id: mongoose.Schema.Types.ObjectId,
     name:{
         type:String,
         required:true
@@ -15,14 +15,17 @@ let CommentSchema=new Schema({
         type:String,
         required:true
     },
-    imgRef:{
+    id:{
         type:String,
-        required:true
+        required: true,
+    },
+    imgURL:{
+        type:String,
     },
     showing:{
         type:Boolean,
         required:true
     }
 });
-
+// Schema wrapped in Objects Model Modelname, Schemaname
 module.exports=mongoose.model("Comment", CommentSchema);

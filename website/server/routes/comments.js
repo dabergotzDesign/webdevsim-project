@@ -1,14 +1,10 @@
 var express = require('express');
 var router = express.Router();
+const { createComment, getAllComments }= require('../controller/Comments');
 
-router.get('/',function(req, res) {
-  res.send({post: "hallo"});
-})
+router.get('/', getAllComments);
 
-router.post('/', function(req, res) {
-  console.log(req.body)
-  res.send(req.body)
-});
+router.post('/',createComment); 
 
 router.get('/:id', function(req, res) {
   const id = req.params.id;

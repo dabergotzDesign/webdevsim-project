@@ -17,7 +17,12 @@ var url = process.env.MONGO_URI;
 mongoose.connect(url, {
   useNewUrlParser: true,
   useCreateIndex: true,
-  useUnifiedTopology: true});
+  useUnifiedTopology: true}).then(()=> {
+    console.log('Database connected');
+  })
+  .catch((error)=> {
+    console.log('Error connecting to database');
+  });
 
 var app = express();
 app.use(cors());
@@ -36,7 +41,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/comments', commentsRouter);
-app.use('/images', imageRouter);
+// app.use('/images', imageRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

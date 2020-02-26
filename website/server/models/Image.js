@@ -2,7 +2,7 @@ const mongoose=require('mongoose');
 const {Schema}=mongoose;
 
 let ImageSchema=new Schema({
-    imgName:{
+    imageRef:{
         type:String,
         default:"none",
         required:true

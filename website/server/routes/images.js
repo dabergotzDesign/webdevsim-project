@@ -17,11 +17,11 @@ let upload = multer({ storage: storage });
 router.route("/upload")
 .post(upload.single('imageData'),(req,res,next)=>{
   console.log(req.body);
-  console.log(req.file.path);
   const newImage=new Image({
- imageName: req.body.imageName,
+ imageRef: req.body.imageRef,
  imageData: req.file.path
-  })
+  });
+
   newImage.save()
   .then((result)=>{
     console.log(result);
@@ -32,6 +32,23 @@ router.route("/upload")
   })
   .catch((err)=>next(err));
 })
+
+router.route("/uploadbase").post((req,res,next)=>{
+  const newImage=new Image({
+    imageRef: req.body.imageRef,
+    imageData: req.file.path
+     });
+
+     newImage.save()
+     .then((result)=>{
+       console.log(result);
+       res.status(200).json({
+         success:true,
+         document:result
+       });
+     })
+     .catch((err)=>next(err));
+   })
 
 // app.post('/upload',function(req, res) {
      
