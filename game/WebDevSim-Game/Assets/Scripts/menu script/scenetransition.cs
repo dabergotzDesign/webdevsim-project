@@ -11,7 +11,7 @@ public class scenetransition : MonoBehaviour
 
     private void Start()
     {
-        transition.Play("crossfade_start");
+        transition.Play("transition_end");
     }
 
     public void StartGame()
