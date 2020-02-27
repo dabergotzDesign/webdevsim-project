@@ -4,21 +4,19 @@ import {storage} from "../../firebase/firebase"
 import axios from 'axios';
 
 const Input=()=>{
-  
   const [response, setResponse]=useState([])
-  // const [post, addNewPost]=useState('')
   const [responseToPost, setResponseToPost]=useState('')
-
   let post='';
-  console.log(post)
-  console.log(responseToPost)
+
   const [baseImg, setBaseImg]=useState('')
   const allInputs={}
   const [imageAsUrl, setImageAsUrl] = useState(allInputs)
   const imageList=[]
+  
+  const nameInput=React.createRef();
+  const commentInput=React.createRef();
 
   useEffect(()=>{
-    // cleanUP();
     callApi().then(res=>setResponse(res.Comment)).catch(err=> console.log(err));
   },[post])
   
@@ -27,22 +25,9 @@ const Input=()=>{
     const body= await response.json()
     if(response.status !== 200) throw Error (body.message);
     return body;
-}
+  }
 
-const cleanUP=()=>{
-  // e.target.reset();
-}
-
-const nameInput=React.createRef();
-const commentInput=React.createRef();
-
-function addPost(name,comment){
-  // addNewPost('')
-  // firstPost=JSON.stringify(newPost);
-  // return firstPost
-};
-
-const handleSubmit= async (e) => {
+  const handleSubmit= async (e) => {
   e.preventDefault();
   setBaseImg('')
   const name = nameInput.current.value.trim();
@@ -52,13 +37,12 @@ const handleSubmit= async (e) => {
       comment,
       date: new Date().toLocaleString(),
       id:uuid(),
-      imgURL:imageAsUrl.imgUrl, //SET URL BEFORE NEW POST
+      imgURL:imageAsUrl.imgURL,
       showing: false
     }; 
-  // addNewPost(newPost);
   post=newPost;
   postData()
-}
+  } 
 
 const postData= async () => {  
 const response=await fetch('http://localhost:5000/comments',{
@@ -69,9 +53,8 @@ const response=await fetch('http://localhost:5000/comments',{
     body: JSON.stringify({post}),
   })
   const body = await response.text();
-  console.log(post)
-  console.log(responseToPost)
   setResponseToPost(body)
+  
   if (baseImg !== ''){   
       const uploadTask=storage.ref(`/images/${post.id}`).put(baseImg) 
       
