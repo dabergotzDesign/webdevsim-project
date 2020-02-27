@@ -4,29 +4,50 @@ import {storage} from "../../firebase/firebase"
 import axios from 'axios';
 
 const Input=()=>{
-  const nameInput=React.createRef();
-  const commentInput=React.createRef();
   
   const [response, setResponse]=useState([])
-  const [post, addNewPost]=useState('')
+  // const [post, addNewPost]=useState('')
   const [responseToPost, setResponseToPost]=useState('')
 
+  let post='';
+  console.log(post)
+  console.log(responseToPost)
   const [baseImg, setBaseImg]=useState('')
   const allInputs={}
   const [imageAsUrl, setImageAsUrl] = useState(allInputs)
+  const imageList=[]
 
-useEffect(()=>{
+  useEffect(()=>{
+    // cleanUP();
     callApi().then(res=>setResponse(res.Comment)).catch(err=> console.log(err));
-  },[])
-const callApi= async () =>{
-const response= await fetch('/comments');
-const body= await response.json()
-if(response.status !== 200) throw Error (body.message);
-return body;
-  }
+  },[post])
+  
+  const callApi= async () =>{
+    const response= await fetch('http://localhost:5000/comments');
+    const body= await response.json()
+    if(response.status !== 200) throw Error (body.message);
+    return body;
+}
 
-function addPost(name, comment){
-    let newPost = {
+const cleanUP=()=>{
+  // e.target.reset();
+}
+
+const nameInput=React.createRef();
+const commentInput=React.createRef();
+
+function addPost(name,comment){
+  // addNewPost('')
+  // firstPost=JSON.stringify(newPost);
+  // return firstPost
+};
+
+const handleSubmit= async (e) => {
+  e.preventDefault();
+  setBaseImg('')
+  const name = nameInput.current.value.trim();
+  const comment = commentInput.current.value.trim();
+  let newPost = {
       name,
       comment,
       date: new Date().toLocaleString(),
@@ -34,30 +55,24 @@ function addPost(name, comment){
       imgURL:imageAsUrl.imgUrl, //SET URL BEFORE NEW POST
       showing: false
     }; 
-    addNewPost(newPost);
-  };
+  // addNewPost(newPost);
+  post=newPost;
+  postData()
+}
 
-  const handleSubmit= async e => {
-    e.preventDefault();
-    e.target.reset();
-    setBaseImg('')
-    
-    const name = nameInput.current.value.trim();
-    const comment = commentInput.current.value.trim();
-    addPost(name,comment)
-    
-    const response=await fetch('/comments',{
-      method:'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({post}),
-    })
-    
-    const body=await response.text();
-    setResponseToPost(body)
-    
-    if (baseImg !== null){   
+const postData= async () => {  
+const response=await fetch('http://localhost:5000/comments',{
+    method:'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({post}),
+  })
+  const body = await response.text();
+  console.log(post)
+  console.log(responseToPost)
+  setResponseToPost(body)
+  if (baseImg !== ''){   
       const uploadTask=storage.ref(`/images/${post.id}`).put(baseImg) 
       
       //initiates the firebase side uploading 
@@ -72,18 +87,19 @@ function addPost(name, comment){
         // gets the functions from storage refences the image storage in firebase by the children
         // gets the download url then sets the image from firebase as the value for the imgUrl key:
         storage.ref('images').child(post.id).getDownloadURL()
-       .then(fireBaseUrl => {
+        .then(fireBaseUrl => {
          setImageAsUrl(prevObject => ({...prevObject, imgUrl: fireBaseUrl}))
         })
       })
-}};
-            
+    }
+  };
+    
 function onChangeHandler(e){
-              setBaseImg(e.target.files[0])
-            }
+  setBaseImg(e.target.files[0])
+}
 
 return(
-    <div>
+  <div>
       <form className="comment-form" encType="multipart/form-data" onSubmit={handleSubmit}>
         <label>name</label>
         <input
@@ -108,14 +124,17 @@ return(
         <br />
       </form>
       {response.map((el,i)=>{
-  return <div key={i} >
-<p>{el._id}</p>
-<p>{el.name}</p>
+        return <div key={i} >
+{/* <p>{el._id}</p>
+<p>{el.name}</p> */}
+<p>{el.comment}</p>
+<p>{el.imgURL}</p>
+<p>{el.date}</p>
 </div>
 })}
 <img src={imageAsUrl.imgUrl} alt="websitePic"/>
 </div>
 )
 }
- 
+
 export default Input;

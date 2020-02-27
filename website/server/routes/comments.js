@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const { createComment, getAllComments }= require('../controller/Comments');
+const { createComment, getAllComments, deleteAllComments }= require('../controller/Comments');
 
 router.get('/', getAllComments);
 
@@ -16,10 +16,6 @@ router.patch('/:id', function(req, res) {
   res.send(req.body);
 });
 
-router.delete('/:id', function(req, res) {
-  const id = req.params.id;
-  res.status(200).json({
-    message:`comment ${id} was deleted successfully!`});
-});
+router.delete('/:id', deleteAllComments);
 
 module.exports = router

@@ -32,7 +32,7 @@ const createComment=(req, res)=> {
 
 const getAllComments=(req,res)=>{
   Comment.find()
-  .select('_id name')
+  .select('_id name comment date imgURL')
   .then((allComments) => {
       return res.status(200).json({
         success: true,
@@ -46,4 +46,14 @@ const getAllComments=(req,res)=>{
       })});
     };
 
-module.exports={createComment, getAllComments};
+const deleteAllComments=async (req, res, next) => {
+  try {
+    const comment = await Comment.findByIdAndDelete(req.params.id);
+    if (!comment) throw new createError.NotFound();
+    res.status(200).send(record);
+  } catch (e) {
+    next(e);
+  }
+};
+
+module.exports={createComment, getAllComments, deleteAllComments};
