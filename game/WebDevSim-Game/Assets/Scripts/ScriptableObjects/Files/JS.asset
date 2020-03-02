@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: JS
   m_EditorClassIdentifier: 
   description: 'Before we code anything, we are going to check if the file is connected
-    to the HTML. To check, the easiest way is to have a console log.
+    to the <color=#ec6463>HTML</color>. To check, the easiest way is to have a <color=#ec6463>console
+    log</color>.
 
-    We just type console.log("HelloWorld"); and see if it''s responds with the string
-    we put in it.'
+    We just type <color=#ec6463>console.log("HelloWorld");</color> and see if it''s
+    responds with the string we put in it.'
   commandName: main.js
   exits: []
   interactableItemInFile:

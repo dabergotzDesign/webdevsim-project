@@ -22,5 +22,5 @@ MonoBehaviour:
     textResponse: 'created button3 "image03"
 
 
-      after adding all three buttons we create a main.js. The javascript file in which
-      we do some programming.'
+      after adding all three buttons we <color=#ec6463>create</color> a <color=#ec6463>main.js</color>.
+      The javascript file in which we do some programming.'

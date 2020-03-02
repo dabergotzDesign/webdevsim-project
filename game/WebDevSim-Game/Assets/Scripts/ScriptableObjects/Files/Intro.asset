@@ -13,14 +13,18 @@ MonoBehaviour:
   m_Name: Intro
   m_EditorClassIdentifier: 
   description: "Welcome to WebDevSim - A Web Development Simulator.\r\nThis game will
-    teach you basics on HTML, CSS and Javascript. Everything you learn here can be
-    used to build a website on your own. \n\nMuch like text adventures you\r will
+    teach you basics on <color=#ec6463>HTML</color>, <color=#ec6463>CSS</color> and
+    <color=#ec6463>Javascript</color>. Everything you learn here can be used to build
+    a website on your own.\nIf you're stuck while playing you can always use the commmand
+    \"<color=#ec6463>help</color>\" and the command \"<color=#ec6463>examine</color>\"
+    + an element you'd like to examine.  \n\nMuch like text adventures you\r will
     write in different languages which are used in web development. Now let\u2019s
-    get down to business. As for every website we start with the HTML.\r\n"
+    get down to business. As for every website we start with the <color=#ec6463>HTML</color>.\r\n"
   commandName: Intro
   exits:
   - keyString: index.html
-    exitDescription: "First we create a html file named \u201Cindex\u201D. "
+    exitDescription: "First we <color=#ec6463>create</color> a <color=#ec6463>html</color>
+      file named \u201C<color=#ec6463>index</color>\u201D. "
     valueCommand: {fileID: 11400000, guid: 7d88fa6f39571aa4c96eef808820df8b, type: 2}
   interactableItemInFile:
   - {fileID: 11400000, guid: d8aa5e45bbbac594db7d3affd78a2d76, type: 2}

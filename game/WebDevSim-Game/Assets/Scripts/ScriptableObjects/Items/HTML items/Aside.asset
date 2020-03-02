@@ -24,5 +24,5 @@ MonoBehaviour:
   - inputAction: {fileID: 11400000, guid: dcc28ce23f5190d4aac675eebdced449, type: 2}
     textResponse: "you added an \"aside\" to the website\r\n\r\nNow that you prepared
       the website for content, let\u2019s add something visible to it.\r\nWhat every
-      website needs is a headline, an h1.\r\nWe gonna make a gallery so we give the
-      website the headline like this:\r\n<h1>gallery</h1>.\r"
+      website needs is a headline, an <color=#ec6463>h1</color>.\r\nWe gonna make
+      a gallery so we give the website the headline like this:\r\n<color=#ec6463><h1>gallery</h1></color>.\r"

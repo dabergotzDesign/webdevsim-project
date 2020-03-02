@@ -22,10 +22,10 @@ MonoBehaviour:
     textResponse: "const button3 was added to the main.js\n\nyes we did it, we have
       now references to the images and buttons.\nOn to the real programming. The first
       function we write will refer to the first image,\r\nwhich will goes like this:\r\n\r\nwith
-      the command code  button1.addEventListener(\"click\",()=>{image.src=\"images/imageName.jpg\")};
+      the command <color=#ec6463>code</color>  <color=#ec6463>button1.addEventListener(\"click\",()=>{image.src=\"images/imageName.jpg\")};</color>
       \nbutton1 refers to fishes.jpg.\r\nbutton2 refers to fox.jpg.\nbutton3 refers
-      to monkey.jpg\n\nThe addEventListener waits for you to act on the website and
-      is an essential for all the interactions on any website.\r\nFor our Text we
-      use the command \u201Ccode\u201D for programming before the code.\r\nI know
-      it\u2019s long, but you\u2019ll make it. Take your time and check it before
-      submit it.\r"
+      to monkey.jpg\n\nThe <color=#ec6463>addEventListener</color> waits for you to
+      act on the website and is an essential for all the interactions on any website.\r\nFor
+      our Text we use the command \u201C<color=#ec6463>code</color>\u201D for programming
+      before the code.\r\nI know it\u2019s long, but you\u2019ll make it. Take your
+      time and check it before submit it.\r"

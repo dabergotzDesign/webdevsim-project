@@ -22,5 +22,5 @@ MonoBehaviour:
     textResponse: <img src=""> adds an Image to the website. It can be displayed from
       an url or when it is saved on your computer.
   - inputAction: {fileID: 11400000, guid: dcc28ce23f5190d4aac675eebdced449, type: 2}
-    textResponse: "added <img> to your website\n\r\nonly the monkey.jpg is left to
-      add.\r"
+    textResponse: "added <img> to your website\n\r\nonly the <color=#ec6463>monkey.jpg</color>
+      is left to add.\r"

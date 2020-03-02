@@ -25,11 +25,13 @@ MonoBehaviour:
     textResponse: "you added a headline to your website.\r\n \nNoticed something new
       on the page? We come back later to it and make it more readalbe.\r\nWhat a Gallery
       needs are Images. Let\u2019s add 3 Images to the Gallery.\nAdding an Image is
-      a little different as adding a \"main\" or a \"h1\".\r\nWe type <img_src=\"images/imageName.jpg\">.
-      Note: \u201C_\u201D is usually a space,\r\nwe use it here only in the game.\r\nThe
-      \"src\", the source, is the path of the image where it is saved locally on your
-      Computer. A few images were provided for you to use. Replace the \u201CimageName.jpg\u201D
-      with one of the names of the images.\r\nImages: \r\nfishes.jpg\r\nfox.jpg\r\r\nmonkey.jpg\r\n\nyou
-      can use the command \"check\" to see if enough images are added."
+      a little different as adding a \"main\" or a \"h1\".\r\nWe type <color=#ec6463><img_src=\"images/imageName.jpg\"></color>.
+      Note: \u201C<color=#ec6463>_</color>\u201D is usually a space,\r\nwe use it
+      here only in the game.\r\nThe \"<color=#ec6463>src</color>\", the source, is
+      the path of the image where it is saved locally on your Computer. A few images
+      were provided for you to use. Replace the \u201C<color=#ec6463>imageName.jpg</color>\u201D
+      with one of the names of the images.\r\nImages: \r\n<color=#ec6463>fishes.jpg\r</color>\n<color=#ec6463>fox.jpg\r\r</color>\n<color=#ec6463>monkey.jpg\r</color>\n\nyou
+      can use the command \"<color=#ec6463>check</color>\" to see if enough images
+      are added."
   - inputAction: {fileID: 11400000, guid: 71fb88013d3120841afb0ab9d8797fa8, type: 2}
     textResponse: you gave your H1 a different color

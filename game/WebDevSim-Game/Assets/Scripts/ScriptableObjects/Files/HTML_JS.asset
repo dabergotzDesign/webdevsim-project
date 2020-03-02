@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4d704e674a81a74a9bee8bcdc529a97, type: 3}
   m_Name: HTML_JS
   m_EditorClassIdentifier: 
-  description: "Similar to h1 we write <button>buttonName</button>. Name the buttons
-    like image01, image02, image03\r"
+  description: "Similar to h1 we write \n<color=#ec6463><button>buttonName</button></color>\nName
+    the buttons like \n<color=#ec6463>image01</color>,\n<color=#ec6463>image02</color>,\n<color=#ec6463>image03\r</color>"
   commandName: index.html
   exits:
   - keyString: main.js

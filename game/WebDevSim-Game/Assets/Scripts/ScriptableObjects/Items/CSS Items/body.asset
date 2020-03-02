@@ -19,5 +19,5 @@ MonoBehaviour:
   description: 
   interactions:
   - inputAction: {fileID: 11400000, guid: 852880d3d25b18944b4c824e9ef0b6d2, type: 2}
-    textResponse: '"body" is the component holder for the website. An empty page/website
+    textResponse: '"body" - is the component holder for the website. An empty page/website
       means the body is empty and holds no components.'

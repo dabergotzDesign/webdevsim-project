@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4d704e674a81a74a9bee8bcdc529a97, type: 3}
   m_Name: CSS
   m_EditorClassIdentifier: 
-  description: "On here we can style everything and give the website more color.\r\nFirst
-    we will add a background to the website or rather the body.\r\nWhen we would like
-    to edit something in CSS we focus on the tag.\r\nFor example: body { }        \r\nInside
-    the curly brackets we write the use keywords and numbers to edit.\n\nWhat we will
-    do in here first is to change the background. To change the background from the
-    blank white to an image we write:\r\nbackground: url(\u201Cimages/imageName.jpg\u201D);\nNote
-    that we close it with ;\r\nReplace \u201CimageName.jpg\u201D with one of the images
-    provided:\r\ncode.jpg\r\ngrid.jpg\r\nmatrix.jpg\r"
+  description: "On here we can style everything and give the website more <color=#ec6463>color</color>.\r\nFirst
+    we will <color=#ec6463>add</color> a <color=#ec6463>background</color> to the
+    website or rather the <color=#ec6463>body</color>.\r\nWhen we would like to edit
+    something in <color=#ec6463>CSS</color> we focus on the tag.\r\nFor example: <color=#ec6463>body
+    { }</color>        \r\nInside the <color=#ec6463>curly brackets</color> we write
+    the use keywords and numbers to edit.\n\nWhat we will do in here first is to change
+    the <color=#ec6463>background</color>. To change the background from the blank
+    white to an image we write:\r\n<color=#ec6463>background: url(\u201Cimages/imageName.jpg\u201D);</color>\nNote
+    that we close it with <color=#ec6463>;</color>\r\nReplace \u201CimageName.jpg\u201D
+    with one of the images provided:\r\n<color=#ec6463>code.jpg\r</color>\n<color=#ec6463>grid.jpg</color>\r\n<color=#ec6463>matrix.jpg</color>\r"
   commandName: style.css
   exits:
   - keyString: index.html

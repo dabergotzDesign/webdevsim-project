@@ -24,6 +24,6 @@ MonoBehaviour:
   - inputAction: {fileID: 11400000, guid: dcc28ce23f5190d4aac675eebdced449, type: 2}
     textResponse: "added <img> to your website\n\r\nIf three images are added we can
       go on. You probably noticed we only see one image right now, but no need to
-      worry, we'll see all of them   again soon enough.\r\n\nThe website still could
-      get some more style, don\u2019t you think? To give it more color we use a CSS
-      file. Let\u2019s create a file with the name style. \r"
+      worry, we'll see all of them again soon enough.\r\n\nThe website still could
+      get some more style, don\u2019t you think? To give it more color we use a <color=#ec6463>CSS</color>
+      file. Let\u2019s <color=#ec6463>create</color> a file with the name style. \r"

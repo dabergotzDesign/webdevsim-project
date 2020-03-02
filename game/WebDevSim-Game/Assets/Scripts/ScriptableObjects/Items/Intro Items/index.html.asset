@@ -16,12 +16,12 @@ MonoBehaviour:
   imageElement: {fileID: 0}
   textElement: 
   elementEnabled: 0
-  description: after that open the file.
+  description: after that <color=#ec6463>open</color> the file.
   interactions:
   - inputAction: {fileID: 11400000, guid: 6fce83366d56f1e45a6a5b928249b961, type: 2}
     textResponse: 'you created index.html file.
 
-      Let''s open the file.'
+      Let''s <color=#ec6463>open</color> the file.'
   - inputAction: {fileID: 11400000, guid: 852880d3d25b18944b4c824e9ef0b6d2, type: 2}
     textResponse: '"html file" Hyper Markup Language. With HTML you can create your
       own Website.'

@@ -17,15 +17,18 @@ MonoBehaviour:
   textElement: 
   elementEnabled: 0
   description: "still empty, huh.\r\nBefore we add visible content to the website,
-    we have to prepare the site, so we are going to add a \"main\" first.\r\nTo add
-    type <main></main>\r\n\r\nNotice these <> Symbols? These are necessary to add
-    something\r\nto the HTML. The first \"main\" is the start of the HTML tag and
-    the second \"main\r\" marks the end of the tag. Oh and don\u2019t forget the /
-    at the start of the second \"main\".\r\n"
+    we have to prepare the site, so we are going to add a \"<color=#ec6463>main</color>\"
+    first.\r\nTo <color=#ec6463>add</color> use the command \"<color=#ec6463>add</color>\"
+    + <color=#ec6463><main></main></color>\r\n\r\nNotice these <color=#ec6463><></color>
+    Symbols? These are necessary to add something\r\nto the HTML. The first \"<color=#ec6463>main</color>\"
+    is the start of the HTML tag and the second \"<color=#ec6463>main</color>\r\"
+    marks the end of the tag. Oh and don\u2019t forget the <color=#ec6463>/</color>
+    at the start of the second \"<color=#ec6463>main</color>\".\r\n"
   interactions:
   - inputAction: {fileID: 11400000, guid: 852880d3d25b18944b4c824e9ef0b6d2, type: 2}
     textResponse: '"main" is a content divider. Used for to add content which should
       show the main point of the website.'
   - inputAction: {fileID: 11400000, guid: dcc28ce23f5190d4aac675eebdced449, type: 2}
     textResponse: "you added a \"main\" to the website.\r\n\r\nGood, what we also
-      need for the website is an \"Aside\", this will be used for the navigation later."
+      need for the website is an \"<color=#ec6463>Aside</color>\", this will be used
+      for the navigation later."

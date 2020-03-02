@@ -22,10 +22,15 @@ MonoBehaviour:
     textResponse: 'const image3 is added
 
 
-      We have a reference to the images, but we still need a reference to the buttons.
-      Similar to the images the const look like this:
+      We have a reference to the <color=#ec6463>images</color>, but we still need
+      a reference to the <color=#ec6463>buttons</color>. Similar to the images the
+      const look like this:
+
+      <color=#ec6463>
 
       button1=document.getElementById("btn1");
+
+      </color>
 
 
       button2 = "btn2"
