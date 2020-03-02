@@ -19,7 +19,7 @@ MonoBehaviour:
   description: "still empty, huh.\r\nBefore we add visible content to the website,
     we have to prepare the site, so we are going to add a \"main\" first.\r\nTo add
     type <main></main>\r\n\r\nNotice these <> Symbols? These are necessary to add
-    something\r\nto your HTML. The first \"main\" is the start of the HTML tag and
+    something\r\nto the HTML. The first \"main\" is the start of the HTML tag and
     the second \"main\r\" marks the end of the tag. Oh and don\u2019t forget the /
     at the start of the second \"main\".\r\n"
   interactions:

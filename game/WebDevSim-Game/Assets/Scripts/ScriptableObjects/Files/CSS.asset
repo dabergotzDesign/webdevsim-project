@@ -17,9 +17,9 @@ MonoBehaviour:
     to edit something in CSS we focus on the tag.\r\nFor example: body { }        \r\nInside
     the curly brackets we write the use keywords and numbers to edit.\n\nWhat we will
     do in here first is to change the background. To change the background from the
-    blank white, to an image we write:\r\nbackground: url(\u201Cimages/imageName.jpg\u201D);.
-    Note that we close it with ;\r\nReplace \u201CimageName.jpg\u201D with one of
-    the images provided:\r\ncode.jpg\r\ngrid.jpg\r\nmatrix.jpg\r"
+    blank white to an image we write:\r\nbackground: url(\u201Cimages/imageName.jpg\u201D);\nNote
+    that we close it with ;\r\nReplace \u201CimageName.jpg\u201D with one of the images
+    provided:\r\ncode.jpg\r\ngrid.jpg\r\nmatrix.jpg\r"
   commandName: style.css
   exits:
   - keyString: index.html

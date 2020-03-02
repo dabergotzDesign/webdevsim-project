@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 471dc4c484b45dd48b642b5497757180, type: 3}
-  m_Name: Image
+  m_Name: javascript
   m_EditorClassIdentifier: 
-  noun: <img>
-  imageElement: {fileID: 21300000, guid: d494b8603c3e5a04ea5b8ca73bebcae6, type: 3}
+  noun: javascript
+  imageElement: {fileID: 0}
   textElement: 
   elementEnabled: 0
   description: 
   interactions:
   - inputAction: {fileID: 11400000, guid: 852880d3d25b18944b4c824e9ef0b6d2, type: 2}
-    textResponse: <img/> adds an image to your website page. The "src" or source is
-      where the image is coming from. It can be safed locally on your PC or with an
-      url.
+    textResponse: '"Javascript" - is the programming language of HTML and the Web.'

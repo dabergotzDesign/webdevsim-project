@@ -24,3 +24,6 @@ MonoBehaviour:
     valueCommand: {fileID: 11400000, guid: 7d88fa6f39571aa4c96eef808820df8b, type: 2}
   interactableItemInFile:
   - {fileID: 11400000, guid: d8aa5e45bbbac594db7d3affd78a2d76, type: 2}
+  - {fileID: 11400000, guid: 96345af5d1dba4d4c8b76afbe7277ae8, type: 2}
+  - {fileID: 11400000, guid: 80db6ae100cfbf2489d63ca0a7f4a4eb, type: 2}
+  - {fileID: 11400000, guid: 9f6cc4c5ff57c0449aff0c548d6d9d3e, type: 2}
