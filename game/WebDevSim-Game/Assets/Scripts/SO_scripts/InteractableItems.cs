@@ -384,6 +384,11 @@ public class InteractableItems : MonoBehaviour
 
     IEnumerator LoadCredits()
     {
+
+        //wait for message
+        yield return new WaitForSeconds(3);
+
+        //start transition
         transition.SetTrigger("start");
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(sceneBuildIndex: 2);
