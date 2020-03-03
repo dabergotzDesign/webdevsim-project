@@ -177,7 +177,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -201,8 +201,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 463151880}
   m_HandleRect: {fileID: 463151879}
   m_Direction: 2
-  m_Value: -0.0021065173
-  m_Size: 0.24271688
+  m_Value: -0.00000027277412
+  m_Size: 0.24271691
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -472,6 +472,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1188777410}
     m_Modifications:
+    - target: {fileID: 23277067460494661, guid: 553de6805d7a5304188233cdbac90fdd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 23277068109892906, guid: 553de6805d7a5304188233cdbac90fdd,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -36
+      objectReference: {fileID: 0}
     - target: {fileID: 23277069078535621, guid: 553de6805d7a5304188233cdbac90fdd,
         type: 3}
       propertyPath: m_Name
@@ -614,7 +624,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &367699146
 RectTransform:
@@ -688,12 +698,12 @@ MonoBehaviour:
   m_Content: {fileID: 1227248330}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 0
+  m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
   m_ScrollSensitivity: 1
-  m_Viewport: {fileID: 0}
+  m_Viewport: {fileID: 367699146}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 13536382}
   m_HorizontalScrollbarVisibility: 0
@@ -1926,7 +1936,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!224 &1227248330
 RectTransform:
@@ -1944,7 +1954,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.96400005, y: 1}
-  m_AnchoredPosition: {x: 2.1377869, y: 1572.8988}
+  m_AnchoredPosition: {x: 2.1377869, y: 1566.3009}
   m_SizeDelta: {x: -13.4, y: 3132.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1227248331
@@ -1973,7 +1983,7 @@ MonoBehaviour:
     m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 6
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
@@ -2113,6 +2123,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e6bf02df1294f2d41ab91aa4f780a53c, type: 2}
   - {fileID: 11400000, guid: 0dbcb7416e2c6a44c9d76af06a102387, type: 2}
   - {fileID: 11400000, guid: cd9c7faedd54b21458644c9deadc62da, type: 2}
+  transition: {fileID: 325685935}
+  transitionTime: 1
   commandNavigation: {fileID: 0}
   interactionDescriptions: []
   interactableItems: {fileID: 0}

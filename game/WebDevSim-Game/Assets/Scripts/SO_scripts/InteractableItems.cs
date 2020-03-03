@@ -269,7 +269,7 @@ public class InteractableItems : MonoBehaviour
     //Command: console.log("HelloWorld");
     public void DisplayHelloWorld()
     {
-        string ifResponded = "It works, now we can go on.\nWhen we want to see the images we are going to connect them to the buttons.\nIf you click on one button one image a different image will be shown, for every button.\nSo we are going to first refer to an image component.The best way to refer to a component is to give it either an \"id\" or a \"class\". In our case the images will have an \"<color=#ec6463>id</color>\",\nlike: <color=#ec6463>id=\"galleryImage\"</color>.";
+        string ifResponded = "It works, now we can go on.\nWhen we want to see the images we are going to connect them to the buttons.\nIf you click on one button one image, a different image, will be shown.\nSo we are going to first refer to an image component.The best way to refer to a component is to give it either an \"id\" or a \"class\". In our case the images will have an \"<color=#ec6463>id</color>\",\nlike: <color=#ec6463>id=\"galleryImage\"</color>.";
         string getElement = "Since we’re now on our javascript file, we can refer to an image component by adding a variable. Which goes like this:\n<color=#ec6463>const image1= document.getElementById(\"IdName\");</color>\nOur Images have the IDs <color=#ec6463>img1</color>,<color=#ec6463>img2</color> and <color=#ec6463>img3</color>.";
         
         controller.LogStringWithReturn("<color=#ec6463>HelloWorld</color>");

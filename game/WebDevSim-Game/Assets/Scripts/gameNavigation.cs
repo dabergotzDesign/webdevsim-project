@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class gameNavigation : MonoBehaviour
 {
     public Text displayText;
     public InputAction[] inputActions;
 
-  
+    public Animator transition;
+    public float transitionTime = 1f;
+
+
     [HideInInspector] public commandNavigation commandNavigation;
     [HideInInspector] public List<string> interactionDescriptions = new List<string>();
     [HideInInspector] public InteractableItems interactableItems;
@@ -30,7 +34,10 @@ public class gameNavigation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-                
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            StartCoroutine(BackToMenu());           
+        }        
     }
 
     public void DisplayLoggedText()
@@ -129,5 +136,14 @@ public class gameNavigation : MonoBehaviour
         actionLog.Add(stringToAdd + "\n");
     }
 
-   
+
+    //ESC for back to main menu
+    IEnumerator BackToMenu()
+    {
+        yield return new WaitForSeconds(transitionTime);
+        transition.SetTrigger("start");
+        SceneManager.LoadScene(sceneBuildIndex: 0);
+    }
+
+
 }

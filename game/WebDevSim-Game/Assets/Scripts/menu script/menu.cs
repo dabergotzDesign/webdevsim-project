@@ -53,4 +53,25 @@ public class menu : EventTrigger
 
     }
 
+    public void MenuPointerEnter()
+    {
+        
+        string menuBtn = "<<color=#6ffce9>MENU</color>/>";
+
+        gameObject.GetComponentInChildren<Text>().text = menuBtn;
+
+    }
+
+    public void MenuPointerExit()
+    {
+        gameObject.GetComponentInChildren<Text>().text = "MENU";
+
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+        Debug.Log("Quit Game");
+    }
+
 }
