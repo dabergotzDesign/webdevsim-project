@@ -1,0 +1,79 @@
+#about{
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+grid-gap: 20px;
+}
+#about p{
+    padding: 20px;
+}
+.text{
+    position: relative;
+    text-align:justify;
+    padding: 10px;
+    margin:0 auto;
+    height: fit-content;
+}
+.text ul li{
+    list-style:none;
+}
+.text{
+    text-align: center;
+    padding:0;
+}
+.dennis-box, .katrin-box{
+margin-top: 100px;
+border: 2px solid #e53889; 
+height: fit-content;
+clear:both;
+box-shadow: -10px -10px 0 #ec6463;
+}
+
+.dennis-box{
+grid-area: 2/2/3/2;
+place-self: center;
+width: 400px;
+}
+.katrin-box{
+grid-area: 2/1/2/1;
+place-self:left center;
+width: 300px;
+}
+.Dennis, .Katrin{
+background-size: cover;
+width: 200px;
+height:200px;
+overflow: visible;
+border: 2px solid #ec6463;
+margin: 0 10px 0 10px;
+box-shadow: 10px 10px 0 #e53889;
+margin: 30px;
+}
+.Dennis{
+float:left;  
+margin-left: -30%;
+background-image: url("../images/Dennis-big.png");
+}
+.Katrin{
+float:right;  
+margin-right:-35%;
+background-image: url("../images/Katrin-big.png");
+}
+.info{
+grid-area: 1/1/1/3;
+border: 2px solid #ec6463;
+width: 70%;
+box-shadow: 10px 10px 0 #ec6463;
+justify-self:right;
+}
+.info::after{
+    content:'';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 22px auto;
+    width: 0;
+    height: 0;
+    border-top: 25px solid #6ffce9;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}

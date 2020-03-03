@@ -1,0 +1,26 @@
+#game{
+    display: flex;
+    flex-flow: row-reverse wrap;
+}
+.game-frame{
+    /* height: 80vh; */
+    width: 90%;
+    border: 2px solid #f2d283;
+    margin:20px 0;
+    align-self:center;
+    flex-basis:100%;
+    box-shadow: 10px 10px 0 #e53889;
+}
+#download{
+    padding: 20px;
+    border: 2px solid #f2d283;
+    font-family: 'Nova Mono', monospace;
+    font-size: 1.5em;
+    color: white;
+    height: fit-content;
+    box-shadow: 10px 10px 0 #e53889;
+    margin-top:50px;
+}
+#download:hover{
+    color: #6ffce9;
+}

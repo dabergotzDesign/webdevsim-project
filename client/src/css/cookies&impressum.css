@@ -1,0 +1,7 @@
+ul{
+    list-style: circle;
+    color:white;
+}
+#impressum article, #cookies p{
+    text-align: justify;
+}
