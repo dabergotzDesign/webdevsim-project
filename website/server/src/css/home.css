@@ -1,0 +1,120 @@
+/* logo */
+
+#start{
+  font-size: 1.2em;
+  color:#f2d283;
+  text-shadow: 2px 2px #808080;
+}
+#start:hover{
+  color: #6ffce9;
+}
+.logo{
+  font-weight: 100;
+  color:#6ffce9;
+  font-size:3em;
+  text-shadow: 2px 2px #808080;
+}
+.center{
+  font-family: 'Nova Mono', monospace;
+  text-align:center;
+  shape-outside: circle(50%);
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 15%;
+  width: fit-content;
+  margin: 0 auto;
+  z-index: 1;
+  font-size: 1.4em;
+}
+#sub-h1{
+  text-shadow: 4px 3px 0 white;
+}
+.logo:before{
+  content:"\003c";
+  color: #f2d283;
+    }
+.logo:after{
+  content:"/\003e";
+  color: #f2d283;
+}
+#divider:before{
+  content:"";
+  border-bottom: 5px solid #6ffce9;
+  width: 25px;
+  display: block;
+  margin:0 auto;
+  box-shadow: 2px 2px white;
+  }
+
+/* pills */
+
+#pill-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    overflow:hidden;
+    }
+    .pill-pattern{
+      width: 2px;
+      overflow: visible;
+    }
+    .right{
+      transform: rotateY(180deg);
+    }
+    .flip{
+      transform: rotateX(180deg);
+    }
+    .pill-row{
+     display: inline-flex;
+    }
+    .pill{
+      display:none;
+      height:2em;
+      border-radius:20px;
+      margin: 0.5em;
+      background-color: #ec6463;
+    }
+    .animate{
+      animation: create 5s;
+    }
+    @keyframes create {
+      from { 
+          width: 0% 
+      }
+      to { 
+          width: 100% 
+      }
+  }
+    .pill:hover{
+      background-color: #f2d283;
+    }
+    .pill:nth-child(2n+2){
+      background-color: #e53889;
+    }
+    .pill:nth-child(2n+2):hover{
+      background-color:#6ffce9;
+    }
+    .empty{
+      background-color:transparent;
+      width: 7em;
+    }
+    .one, .two, .three, .four, .five{
+    }
+    .one{
+      width:5em;
+    }
+    .two{
+      width:10em;
+    }
+    .three{
+      width:8em;
+    }
+    .four{
+      width:3em;
+    }
+    .five{
+      width:15em;
+    }
+

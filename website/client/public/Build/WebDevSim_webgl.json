@@ -1,0 +1,17 @@
+{
+"companyName": "WebDevSim",
+"productName": "WebDevSim",
+"productVersion": "1.1",
+"dataUrl": "WebDevSim_webgl.data.unityweb",
+"wasmCodeUrl": "WebDevSim_webgl.wasm.code.unityweb",
+"wasmFrameworkUrl": "WebDevSim_webgl.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "WebDevSim_webgl.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.2.19f1"
+}

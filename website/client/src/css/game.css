@@ -1,0 +1,41 @@
+#game{
+    display: flex;
+    flex-flow: row-reverse wrap;
+}
+.game-frame{
+    height: fit-content;
+    width: 90%;
+    border: 2px solid #f2d283;
+    margin:20px 0;
+    align-self:center;
+    flex-basis:100%;
+    box-shadow: 10px 10px 0 #e53889;
+}
+#download{
+    padding: 20px;
+    border: 2px solid #f2d283;
+    font-family: 'Nova Mono', monospace;
+    font-size: 1.5em;
+    color: white;
+    height: fit-content;
+    box-shadow: 10px 10px 0 #e53889;
+    margin-top:50px;
+}
+#download:hover{
+    color: #6ffce9;
+}
+#unityContainer{
+    height: fit-content;
+    min-height: 300px;
+    display: flex;
+    place-content: center; 
+} 
+#startButton{
+ background-color:transparent;
+ font-family: 'Nova Mono', monospace;
+    font-size: 2em;
+    color: #e53889;
+    height: auto;
+    width: 100%;
+    border: none;
+}
